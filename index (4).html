@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elettricista & Idraulico – Nord Italia | Interventi Rapidi</title>
+  <meta name="description" content="Elettricista e idraulico professionista nel nord Italia. Interventi rapidi, preventivi gratuiti, disponibile 7 giorni su 7. Chiama ora per un sopralluogo." />
+  <meta name="keywords" content="elettricista nord italia, idraulico nord italia, impianti elettrici, perdite acqua, emergenza idraulico, elettricista Milano, idraulico Torino" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://your-site.vercel.app/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Elettricista & Idraulico – Nord Italia" />
+  <meta property="og:description" content="Interventi rapidi ed affidabili. Preventivi gratuiti. Chiama ora." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Elettricista & Idraulico Nord Italia",
+    "description": "Servizi elettrici e idraulici professionali nel nord Italia",
+    "areaServed": "Nord Italia",
+    "telephone": "+39-XXX-XXX-XXXX",
+    "openingHours": "Mo-Su 07:00-21:00",
+    "priceRange": "€€",
+    "serviceType": ["Elettricista", "Idraulico"]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:      #1A2744;
+      --terracotta:#C4603A;
+      --terra-light:#D97A55;
+      --linen:     #F7F4EE;
+      --charcoal:  #1C1C1C;
+      --mid-gray:  #6B7280;
+      --white:     #FFFFFF;
+      --border:    #E2DDD6;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--linen);
+      color: var(--charcoal);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── STICKY PHONE BAR ── */
+    .sticky-bar {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 100;
+      background: var(--terracotta);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      box-shadow: 0 -4px 24px rgba(0,0,0,0.18);
+    }
+    .sticky-bar a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      letter-spacing: 0.01em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .sticky-bar .pulse {
+      width: 10px; height: 10px;
+      background: #fff;
+      border-radius: 50%;
+      animation: pulse 1.8s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.4); }
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 99;
+      background: rgba(26, 39, 68, 0.97);
+      backdrop-filter: blur(8px);
+      padding: 16px 5vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--white);
+      letter-spacing: 0.02em;
+    }
+    .nav-logo span { color: var(--terracotta); }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--terra-light); }
+    .nav-cta {
+      background: var(--terracotta);
+      color: #fff !important;
+      padding: 9px 20px;
+      border-radius: 6px;
+      font-weight: 600 !important;
+      opacity: 1 !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--terra-light) !important; }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      background: var(--navy);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 120px 5vw 100px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(196,96,58,0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--terracotta);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      width: 32px; height: 2px;
+      background: var(--terracotta);
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.6rem, 6vw, 5.2rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.08;
+      max-width: 700px;
+      margin-bottom: 28px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--terracotta);
+    }
+    .hero-sub {
+      color: rgba(255,255,255,0.65);
+      font-size: 1.05rem;
+      max-width: 480px;
+      margin-bottom: 44px;
+      line-height: 1.7;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+    .btn-primary {
+      background: var(--terracotta);
+      color: #fff;
+      padding: 16px 32px;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { background: var(--terra-light); transform: translateY(-2px); }
+    .btn-ghost {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.95rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      transition: color 0.2s;
+    }
+    .btn-ghost:hover { color: #fff; }
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 64px;
+    }
+    .badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.55);
+      font-size: 0.82rem;
+      font-weight: 500;
+    }
+    .badge-icon {
+      width: 32px; height: 32px;
+      background: rgba(255,255,255,0.07);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+    }
+
+    /* ── SERVICES ── */
+    .section { padding: 96px 5vw; }
+    .section-label {
+      color: var(--terracotta);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-label::before { content: ''; width: 28px; height: 2px; background: var(--terracotta); }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.15;
+      max-width: 560px;
+      margin-bottom: 56px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .service-card {
+      background: var(--white);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: box-shadow 0.25s, transform 0.2s;
+    }
+    .service-card:hover {
+      box-shadow: 0 12px 40px rgba(26,39,68,0.12);
+      transform: translateY(-4px);
+    }
+    .service-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      background: #ddd;
+    }
+    .service-img-placeholder {
+      width: 100%;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+    }
+    .service-card.electric .service-img-placeholder { background: linear-gradient(135deg, #1A2744 0%, #243660 100%); }
+    .service-card.plumbing .service-img-placeholder { background: linear-gradient(135deg, #1e4a6e 0%, #2d6fa0 100%); }
+    .service-card.emergency .service-img-placeholder { background: linear-gradient(135deg, #7a1f1f 0%, #C4603A 100%); }
+    .service-card.renovation .service-img-placeholder { background: linear-gradient(135deg, #2d4a1e 0%, #4a7a30 100%); }
+
+    .service-body { padding: 28px; }
+    .service-tag {
+      display: inline-block;
+      background: rgba(196,96,58,0.1);
+      color: var(--terracotta);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-bottom: 14px;
+    }
+    .service-body h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .service-body p {
+      color: var(--mid-gray);
+      font-size: 0.9rem;
+      line-height: 1.65;
+      margin-bottom: 18px;
+    }
+    .service-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .service-list li {
+      font-size: 0.87rem;
+      color: var(--charcoal);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .service-list li::before {
+      content: '✓';
+      color: var(--terracotta);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* ── WHY US ── */
+    .why-section {
+      background: var(--navy);
+      padding: 96px 5vw;
+    }
+    .why-section .section-title { color: var(--white); }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 32px;
+      margin-top: 48px;
+    }
+    .why-card {
+      padding: 32px;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      background: rgba(255,255,255,0.04);
+    }
+    .why-icon {
+      font-size: 2rem;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .why-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .why-card p {
+      color: rgba(255,255,255,0.55);
+      font-size: 0.88rem;
+      line-height: 1.65;
+    }
+
+    /* ── STATS ── */
+    .stats-strip {
+      background: var(--terracotta);
+      padding: 56px 5vw;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 48px;
+    }
+    .stat { text-align: center; }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1;
+    }
+    .stat-label {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.85rem;
+      margin-top: 6px;
+      font-weight: 500;
+    }
+
+    /* ── PROCESS ── */
+    .process-section { padding: 96px 5vw; background: var(--white); }
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 32px;
+      margin-top: 56px;
+      position: relative;
+    }
+    .process-step { text-align: center; }
+    .process-num {
+      width: 56px; height: 56px;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 50%;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .process-step h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .process-step p {
+      color: var(--mid-gray);
+      font-size: 0.88rem;
+      line-height: 1.65;
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials-section { padding: 96px 5vw; }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 56px;
+    }
+    .testimonial {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px;
+    }
+    .stars { color: #F5A623; font-size: 1rem; margin-bottom: 14px; letter-spacing: 2px; }
+    .testimonial blockquote {
+      font-size: 0.92rem;
+      color: var(--charcoal);
+      line-height: 1.7;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .author-avatar {
+      width: 40px; height: 40px;
+      background: var(--navy);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+    .author-name { font-weight: 600; font-size: 0.88rem; color: var(--navy); }
+    .author-city { font-size: 0.8rem; color: var(--mid-gray); }
+
+    /* ── CONTACT ── */
+    .contact-section {
+      background: var(--navy);
+      padding: 96px 5vw 140px;
+      text-align: center;
+    }
+    .contact-section .section-label { justify-content: center; }
+    .contact-section .section-label::before { display: none; }
+    .contact-section .section-title {
+      color: var(--white);
+      max-width: 100%;
+      margin: 0 auto 16px;
+      text-align: center;
+    }
+    .contact-sub {
+      color: rgba(255,255,255,0.55);
+      font-size: 1rem;
+      margin-bottom: 48px;
+    }
+    .contact-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 56px;
+    }
+    .contact-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 10px;
+      padding: 28px 36px;
+      min-width: 200px;
+    }
+    .contact-card-icon { font-size: 1.8rem; margin-bottom: 10px; }
+    .contact-card-label { color: rgba(255,255,255,0.5); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; }
+    .contact-card-value { color: var(--white); font-size: 1rem; font-weight: 600; text-decoration: none; }
+    .contact-card a { color: inherit; text-decoration: none; }
+    .contact-card a:hover { color: var(--terra-light); }
+
+    .contact-form-wrapper {
+      max-width: 560px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-bottom: 16px;
+    }
+    .form-group label {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.82rem;
+      font-weight: 500;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 7px;
+      padding: 12px 16px;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      width: 100%;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--terracotta);
+    }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .form-group select option { background: var(--navy); }
+    .form-submit {
+      width: 100%;
+      background: var(--terracotta);
+      color: #fff;
+      border: none;
+      padding: 16px;
+      border-radius: 7px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: background 0.2s;
+      margin-top: 8px;
+    }
+    .form-submit:hover { background: var(--terra-light); }
+
+    @media (max-width: 540px) {
+      .form-row { grid-template-columns: 1fr; }
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--charcoal);
+      color: rgba(255,255,255,0.45);
+      text-align: center;
+      padding: 28px 5vw;
+      font-size: 0.82rem;
+    }
+    footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
+
+    /* ── AREA SERVED ── */
+    .area-section { padding: 80px 5vw; background: var(--linen); }
+    .area-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 40px;
+    }
+    .area-tag {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 8px 18px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--navy);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">Nord<span>Tecnici</span></div>
+    <ul class="nav-links">
+      <li><a href="#servizi">Servizi</a></li>
+      <li><a href="#come-lavoriamo">Come Lavoriamo</a></li>
+      <li><a href="#recensioni">Recensioni</a></li>
+      <li><a href="#contatti" class="nav-cta">Preventivo Gratuito</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-eyebrow">Elettricista · Idraulico · Nord Italia</div>
+    <h1>Interventi rapidi.<br /><em>Lavoro fatto bene.</em></h1>
+    <p class="hero-sub">Guasti elettrici, perdite d'acqua, nuovi impianti. Siamo operativi 7 giorni su 7 e arriviamo da te in tempi brevi con preventivo trasparente.</p>
+    <div class="hero-actions">
+      <a href="tel:+39XXXXXXXXXX" class="btn-primary">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.1 12 19.79 19.79 0 0 1 1.07 3.37a2 2 0 0 1 1.99-2.18H6a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 16z"/></svg>
+        Chiama ora
+      </a>
+      <a href="#contatti" class="btn-ghost">
+        Richiedi preventivo scritto
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="hero-badges">
+      <div class="badge"><div class="badge-icon">⚡</div>Elettricista professionista</div>
+      <div class="badge"><div class="badge-icon">🔧</div>Idraulico certificato</div>
+      <div class="badge"><div class="badge-icon">📋</div>Preventivo gratuito</div>
+      <div class="badge"><div class="badge-icon">⏱️</div>Intervento in giornata</div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="servizi">
+    <div class="section-label">I nostri servizi</div>
+    <h2 class="section-title">Tutto ciò di cui hai bisogno, in un unico numero.</h2>
+    <div class="services-grid">
+
+      <div class="service-card electric">
+        <div class="service-img-placeholder">⚡</div>
+        <div class="service-body">
+          <div class="service-tag">Elettricità</div>
+          <h3>Impianti Elettrici</h3>
+          <p>Installazione, manutenzione e riparazione di impianti elettrici residenziali e commerciali. Interveniamo su guasti, cortocircuiti e nuove installazioni.</p>
+          <ul class="service-list">
+            <li>Quadri elettrici e differenziali</li>
+            <li>Cablaggio e nuovi punti luce</li>
+            <li>Messa a terra e verifica impianto</li>
+            <li>Prese, interruttori e lampadine</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-card plumbing">
+        <div class="service-img-placeholder">🔧</div>
+        <div class="service-body">
+          <div class="service-tag">Idraulica</div>
+          <h3>Impianti Idraulici</h3>
+          <p>Riparazione perdite, sostituzione rubinetteria, installazione sanitari e gestione di tutto l'impianto idrico della tua abitazione o ufficio.</p>
+          <ul class="service-list">
+            <li>Riparazione perdite d'acqua</li>
+            <li>Sostituzione rubinetti e miscelatori</li>
+            <li>Installazione WC, docce, lavabi</li>
+            <li>Scarichi e colonne di scarico</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-card emergency">
+        <div class="service-img-placeholder">🚨</div>
+        <div class="service-body">
+          <div class="service-tag">Emergenza</div>
+          <h3>Interventi Urgenti</h3>
+          <p>Guasto improvviso? Perdita d'acqua? Non aspettare. Siamo disponibili per interventi urgenti e cerchiamo di intervenire il prima possibile.</p>
+          <ul class="service-list">
+            <li>Blackout e guasti gravi</li>
+            <li>Perdite d'acqua improvvise</li>
+            <li>Scarichi ostruiti</li>
+            <li>Disponibili su appuntamento urgente</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-card renovation">
+        <div class="service-img-placeholder">🏠</div>
+        <div class="service-body">
+          <div class="service-tag">Ristrutturazione</div>
+          <h3>Ristrutturazioni</h3>
+          <p>Stai ristrutturando casa o un locale commerciale? Gestiamo la parte elettrica e idraulica dall'inizio alla fine, in coordinazione con la tua impresa edile.</p>
+          <ul class="service-list">
+            <li>Impianto elettrico completo</li>
+            <li>Impianto idrico e riscaldamento</li>
+            <li>Bagni e cucine chiavi in mano</li>
+            <li>Documentazione e collaudo</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-strip">
+    <div class="stat">
+      <div class="stat-num">500+</div>
+      <div class="stat-label">Clienti soddisfatti</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">7gg</div>
+      <div class="stat-label">Disponibilità settimanale</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">4.9★</div>
+      <div class="stat-label">Valutazione media</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Preventivo gratuito</div>
+    </div>
+  </div>
+
+  <!-- WHY US -->
+  <section class="why-section">
+    <div class="section-label" style="color: rgba(255,255,255,0.5);">Perché sceglierci</div>
+    <h2 class="section-title">Professionisti, non improvvisati.</h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <span class="why-icon">🎯</span>
+        <h4>Preventivo Trasparente</h4>
+        <p>Prima di iniziare qualsiasi lavoro, ricevi un preventivo chiaro e dettagliato. Nessuna sorpresa in fattura.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">⏱️</span>
+        <h4>Puntualità</h4>
+        <p>Rispettiamo gli appuntamenti. Ti confermiamo l'orario e ti avvisiamo se ci sono variazioni.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">🧹</span>
+        <h4>Pulizia del Cantiere</h4>
+        <p>Lasciamo il posto come lo abbiamo trovato. Pulizia e ordine fanno parte del nostro lavoro.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">💬</span>
+        <h4>Comunicazione Diretta</h4>
+        <p>Un unico referente per tutto il lavoro. Niente call center, parli direttamente con chi opera.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process-section" id="come-lavoriamo">
+    <div class="section-label">Come lavoriamo</div>
+    <h2 class="section-title">Semplice dal primo contatto all'ultimo bullone.</h2>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="process-num">1</div>
+        <h4>Ci contatti</h4>
+        <p>Chiama o invia un messaggio. Descrivi il problema e ti rispondo entro pochi minuti.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">2</div>
+        <h4>Sopralluogo</h4>
+        <p>Vengo da te per valutare il lavoro e ti faccio un preventivo gratuito e senza impegno.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">3</div>
+        <h4>Intervento</h4>
+        <p>Concordiamo data e orario. Arrivo puntuale con tutti i materiali necessari.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">4</div>
+        <h4>Lavoro completato</h4>
+        <p>Fine lavori, pulizia del cantiere, e paghi solo quanto pattuito. Nessuna sorpresa.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AREA SERVED -->
+  <section class="area-section">
+    <div class="section-label">Zone di intervento</div>
+    <h2 class="section-title" style="margin-bottom: 0">Operiamo in tutto il nord Italia.</h2>
+    <div class="area-tags">
+      <span class="area-tag">Milano</span>
+      <span class="area-tag">Torino</span>
+      <span class="area-tag">Bergamo</span>
+      <span class="area-tag">Brescia</span>
+      <span class="area-tag">Verona</span>
+      <span class="area-tag">Vicenza</span>
+      <span class="area-tag">Padova</span>
+      <span class="area-tag">Venezia</span>
+      <span class="area-tag">Bologna</span>
+      <span class="area-tag">Modena</span>
+      <span class="area-tag">Parma</span>
+      <span class="area-tag">Genova</span>
+      <span class="area-tag">Como</span>
+      <span class="area-tag">Monza</span>
+      <span class="area-tag">Varese</span>
+      <span class="area-tag">Novara</span>
+      <span class="area-tag">Treviso</span>
+      <span class="area-tag">Udine</span>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section" id="recensioni">
+    <div class="section-label">Recensioni</div>
+    <h2 class="section-title">Cosa dicono i nostri clienti.</h2>
+    <div class="testimonials-grid">
+
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Perdita d'acqua improvvisa un sabato pomeriggio. Ha risposto subito, è venuto in un'ora e ha risolto il problema in modo pulito e professionale. Prezzi onesti."</blockquote>
+        <div class="testimonial-author">
+          <div class="author-avatar">MR</div>
+          <div>
+            <div class="author-name">Marco R.</div>
+            <div class="author-city">Milano</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Ho fatto rifare l'impianto elettrico di tutta la casa. Lavoro impeccabile, preventivo rispettato al centesimo e cantiere lasciato pulitissimo. Lo richiamerò senz'altro."</blockquote>
+        <div class="testimonial-author">
+          <div class="author-avatar">SF</div>
+          <div>
+            <div class="author-name">Stefania F.</div>
+            <div class="author-city">Bergamo</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Professionista serio e competente. Ha risolto un problema che altri avevano lasciato a metà. Disponibile, puntuale e molto chiaro nelle spiegazioni."</blockquote>
+        <div class="testimonial-author">
+          <div class="author-avatar">AL</div>
+          <div>
+            <div class="author-name">Andrea L.</div>
+            <div class="author-city">Torino</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contatti">
+    <div class="section-label">Contatti</div>
+    <h2 class="section-title">Pronto a intervenire.</h2>
+    <p class="contact-sub">Chiamaci o compila il modulo. Ti risponderemo entro poche ore.</p>
+
+    <div class="contact-cards">
+      <div class="contact-card">
+        <div class="contact-card-icon">📞</div>
+        <div class="contact-card-label">Telefono / WhatsApp</div>
+        <a href="tel:+39XXXXXXXXXX" class="contact-card-value">+39 XXX XXX XXXX</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-icon">📧</div>
+        <div class="contact-card-label">Email</div>
+        <a href="mailto:info@tuasocietà.it" class="contact-card-value">info@nordtecnici.it</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-icon">🕐</div>
+        <div class="contact-card-label">Orari</div>
+        <div class="contact-card-value">Lun–Dom, 7:00–21:00</div>
+      </div>
+    </div>
+
+    <div class="contact-form-wrapper">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Il tuo nome" />
+        </div>
+        <div class="form-group">
+          <label for="tel">Telefono</label>
+          <input type="tel" id="tel" name="tel" placeholder="+39 XXX XXX XXXX" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="servizio">Tipo di servizio</label>
+        <select id="servizio" name="servizio">
+          <option value="">Seleziona un servizio…</option>
+          <option>Impianto elettrico</option>
+          <option>Impianto idraulico</option>
+          <option>Intervento urgente</option>
+          <option>Ristrutturazione</option>
+          <option>Altro</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="messaggio">Descrivi brevemente il problema</label>
+        <textarea id="messaggio" name="messaggio" placeholder="Es: perdita sotto il lavandino, quadro elettrico che salta…"></textarea>
+      </div>
+      <button type="button" class="form-submit" onclick="handleSubmit(this)">Invia richiesta di preventivo →</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2024 NordTecnici · P.IVA XXXXXXXXXXX · <a href="mailto:info@nordtecnici.it">info@nordtecnici.it</a></p>
+    <p style="margin-top:6px;">Tutti i diritti riservati · <a href="#">Privacy Policy</a></p>
+  </footer>
+
+  <!-- STICKY BAR -->
+  <div class="sticky-bar">
+    <div class="pulse"></div>
+    <a href="tel:+39XXXXXXXXXX">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.1 12 19.79 19.79 0 0 1 1.07 3.37a2 2 0 0 1 1.99-2.18H6a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 16z"/></svg>
+      Chiama ora — +39 XXX XXX XXXX
+    </a>
+  </div>
+
+  <script>
+    function handleSubmit(btn) {
+      btn.textContent = '✓ Richiesta inviata! Ti contatteremo presto.';
+      btn.style.background = '#2d6a3f';
+      btn.disabled = true;
+      // TODO: connect to Formspree, Netlify Forms, or your backend
+    }
+  </script>
+
+</body>
+</html>
