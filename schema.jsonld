@@ -1,0 +1,157 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://bh-electricbh-plumer.vercel.app/#business",
+    "name": "Vanguard Flow & Spark",
+    "alternateName": "Elettricista & Idraulico Nord Italia",
+    "description": "Servizi professionali di elettricista e idraulico nel nord Italia. Impianti elettrici, idraulici, interventi urgenti e ristrutturazioni. Disponibili 7 giorni su 7, preventivo gratuito.",
+    "url": "https://bh-electricbh-plumer.vercel.app",
+    "telephone": "+39-XXX-XXX-XXXX",
+    "email": "info@nordtecnici.it",
+    "priceRange": "€€",
+    "currenciesAccepted": "EUR",
+    "paymentAccepted": "Cash, Bank Transfer",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"
+        ],
+        "opens": "07:00",
+        "closes": "21:00"
+      }
+    ],
+    "areaServed": [
+      { "@type": "City", "name": "Milano" },
+      { "@type": "City", "name": "Torino" },
+      { "@type": "City", "name": "Bergamo" },
+      { "@type": "City", "name": "Brescia" },
+      { "@type": "City", "name": "Verona" },
+      { "@type": "City", "name": "Vicenza" },
+      { "@type": "City", "name": "Padova" },
+      { "@type": "City", "name": "Venezia" },
+      { "@type": "City", "name": "Bologna" },
+      { "@type": "City", "name": "Modena" },
+      { "@type": "City", "name": "Parma" },
+      { "@type": "City", "name": "Genova" },
+      { "@type": "City", "name": "Como" },
+      { "@type": "City", "name": "Monza" },
+      { "@type": "City", "name": "Varese" },
+      { "@type": "City", "name": "Novara" },
+      { "@type": "City", "name": "Treviso" },
+      { "@type": "City", "name": "Udine" }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servizi Elettrici e Idraulici",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Impianti Elettrici",
+            "description": "Installazione, manutenzione e riparazione di impianti elettrici residenziali e commerciali. Quadri elettrici, cablaggio, messa a terra, nuovi punti luce.",
+            "serviceType": "Electrical Installation"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Impianti Idraulici",
+            "description": "Riparazione perdite, sostituzione rubinetteria, installazione sanitari, gestione impianto idrico residenziale e commerciale.",
+            "serviceType": "Plumbing"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Interventi Urgenti",
+            "description": "Pronto intervento per blackout, guasti gravi, perdite d'acqua improvvise e scarichi ostruiti. Disponibili su appuntamento urgente.",
+            "serviceType": "Emergency Repair"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Ristrutturazioni",
+            "description": "Gestione completa della parte elettrica e idraulica in ristrutturazioni residenziali e commerciali. Bagni e cucine chiavi in mano.",
+            "serviceType": "Renovation"
+          }
+        }
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "bestRating": "5",
+      "worstRating": "1",
+      "ratingCount": "500"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Marco R." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "reviewBody": "Perdita d'acqua improvvisa un sabato pomeriggio. Ha risposto subito, è venuto in un'ora e ha risolto il problema in modo pulito e professionale. Prezzi onesti.",
+        "datePublished": "2026-01-15"
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Stefania F." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "reviewBody": "Ho fatto rifare l'impianto elettrico di tutta la casa. Lavoro impeccabile, preventivo rispettato al centesimo e cantiere lasciato pulitissimo.",
+        "datePublished": "2026-02-20"
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Andrea L." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "reviewBody": "Professionista serio e competente. Ha risolto un problema che altri avevano lasciato a metà. Disponibile, puntuale e molto chiaro nelle spiegazioni.",
+        "datePublished": "2026-03-10"
+      }
+    ],
+    "sameAs": []
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Operate in tutto il nord Italia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì, operiamo in tutte le principali città del nord Italia incluse Milano, Torino, Bergamo, Brescia, Verona, Padova, Venezia, Bologna, Genova e molte altre."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Il preventivo è gratuito?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì, il sopralluogo e il preventivo sono completamente gratuiti e senza impegno."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Siete disponibili il weekend?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì, siamo operativi 7 giorni su 7, dal lunedì alla domenica dalle 7:00 alle 21:00."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quanto tempo ci vuole per un intervento urgente?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Per interventi urgenti come perdite d'acqua o blackout cerchiamo di intervenire il prima possibile, spesso in giornata."
+        }
+      }
+    ]
+  }
+]

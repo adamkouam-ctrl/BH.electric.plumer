@@ -1,0 +1,64 @@
+# Vanguard Flow & Spark — Elettricista & Idraulico Nord Italia
+
+## Who We Are
+Vanguard Flow & Spark is a professional electrical and plumbing service company operating across northern Italy. We serve both residential and commercial clients with fast response times, transparent pricing, and certified technicians. Available 7 days a week, 07:00–21:00.
+
+## Core Services
+
+### Electrical Services (Impianti Elettrici)
+- Installation, maintenance and repair of residential and commercial electrical systems
+- Electrical panels and differential switches
+- Wiring and new lighting points
+- Earthing and system inspection
+- Sockets, switches and lighting fixtures
+
+### Plumbing Services (Impianti Idraulici)
+- Water leak detection and repair
+- Tap and mixer replacement
+- Installation of toilets, showers and basins
+- Drainage and waste pipe management
+- Full hydraulic system management
+
+### Emergency Interventions (Interventi Urgenti)
+- Power outages and major electrical faults
+- Sudden water leaks
+- Blocked drains
+- Urgent appointment availability
+
+### Renovation Work (Ristrutturazioni)
+- Complete electrical system for new builds and renovations
+- Plumbing and heating installation
+- Turnkey bathrooms and kitchens
+- Certification and testing documentation
+
+## Service Area
+Northern Italy (Nord Italia), including:
+Milano, Torino, Bergamo, Brescia, Verona, Vicenza, Padova, Venezia, Bologna, Modena, Parma, Genova, Como, Monza, Varese, Novara, Treviso, Udine — and surrounding provinces.
+
+## Key Facts
+- 500+ satisfied clients
+- Average rating: 4.9/5
+- Available: Monday–Sunday, 07:00–21:00
+- Free quote: always, no commitment
+- Same-day intervention available for emergencies
+- Single point of contact — speak directly with the technician
+
+## Why Choose Us
+- Transparent quotes: full breakdown before any work begins, no hidden costs
+- Punctuality: confirmed appointment times with advance notice of any changes
+- Clean worksite: full clean-up after every job
+- Direct communication: no call centres, direct line to the operative
+
+## Contact
+- Website: https://bh-electricbh-plumer.vercel.app
+- Phone / WhatsApp: +39 XXX XXX XXXX
+- Email: info@nordtecnici.it
+- Hours: Mon–Sun, 07:00–21:00
+
+## Language
+Primary language: Italian (it-IT)
+Also serves French and German-speaking clients in border areas.
+
+## Structured Data
+Full JSON-LD schema available at: https://bh-electricbh-plumer.vercel.app/schema.jsonld
+Sitemap: https://bh-electricbh-plumer.vercel.app/sitemap.xml
