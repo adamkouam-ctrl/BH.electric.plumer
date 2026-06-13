@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impianti Elettrici Nord Italia – Installazione & Riparazione | Vanguard Flow & Spark</title>
+  <meta name="description" content="Installazione, manutenzione e riparazione di impianti elettrici residenziali e commerciali. Certificati DM 37/2008. Preventivo gratuito. Intervento in giornata su Milano, Torino, Bergamo e tutta la Lombardia." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://bh-electricbh-plumer.vercel.app/impianti-elettrici" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231A2744'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='serif' font-weight='bold' font-size='18' fill='%23C4603A'>V</text></svg>" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Impianti Elettrici – Vanguard Flow & Spark" />
+  <meta property="og:description" content="Certificati DM 37/2008. Quadri elettrici, cablaggio, messa a terra. Preventivo gratuito." />
+  <meta property="og:url" content="https://bh-electricbh-plumer.vercel.app/impianti-elettrici" />
+  <meta property="og:image" content="https://bh-electricbh-plumer.vercel.app/og-image.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Impianti Elettrici",
+    "serviceType": "Servizi elettrici residenziali e commerciali",
+    "description": "Installazione, manutenzione e riparazione di impianti elettrici. Certificati DM 37/2008. Rilascio DICO a fine lavori.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Vanguard Flow & Spark",
+      "url": "https://bh-electricbh-plumer.vercel.app",
+      "telephone": "+39-XXX-XXX-XXXX",
+      "email": "info@nordtecnici.it"
+    },
+    "areaServed": {"@type": "Country", "name": "Italy"},
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servizi elettrici",
+      "itemListElement": [
+        {"@type": "Offer", "name": "Installazione quadro elettrico", "priceCurrency": "EUR"},
+        {"@type": "Offer", "name": "Cablaggio e nuovi punti luce", "priceCurrency": "EUR"},
+        {"@type": "Offer", "name": "Messa a terra e verifica impianto", "priceCurrency": "EUR"}
+      ]
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://bh-electricbh-plumer.vercel.app/"},
+      {"@type": "ListItem", "position": 2, "name": "Impianti Elettrici", "item": "https://bh-electricbh-plumer.vercel.app/impianti-elettrici"}
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1600&q=80&auto=format&fit=crop" fetchpriority="high" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:        #1A2744;
+      --navy-deep:   #111B33;
+      --terracotta:  #C4603A;
+      --terra-light: #D97A55;
+      --linen:       #F7F4EE;
+      --charcoal:    #1C1C1C;
+      --mid-gray:    #6B7280;
+      --white:       #FFFFFF;
+      --border:      #E2DDD6;
+      --green:       #2d6a3f;
+      --accent:      #E8A020;
+    }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { font-family: 'Inter', sans-serif; background: var(--linen); color: var(--charcoal); line-height: 1.6; overflow-x: hidden; }
+    img { display: block; max-width: 100%; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 99; background: rgba(17,27,51,0.97); backdrop-filter: blur(10px); padding: 0 5vw; height: 64px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .nav-logo { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.15rem; color: var(--white); letter-spacing: 0.02em; text-decoration: none; }
+    .nav-logo span { color: var(--terracotta); }
+    .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+    .nav-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { background: var(--terracotta) !important; color: #fff !important; padding: 9px 20px; border-radius: 6px; font-weight: 600 !important; }
+    .nav-back { color: rgba(255,255,255,0.5) !important; font-size: 0.82rem !important; display: flex; align-items: center; gap: 6px; }
+    .nav-hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 40px; height: 40px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-hamburger span { display: block; width: 24px; height: 2px; background: #fff; border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu { display: none; position: fixed; inset: 0; z-index: 105; background: var(--navy-deep); flex-direction: column; align-items: center; justify-content: center; gap: 36px; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { color: #fff; text-decoration: none; font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; }
+    .mobile-menu .mobile-cta { background: var(--terracotta); padding: 16px 40px; border-radius: 8px; font-size: 1.2rem !important; }
+    @media (max-width: 768px) { .nav-links { display: none; } .nav-hamburger { display: flex; } }
+
+    /* HERO */
+    .hero { min-height: 80vh; position: relative; display: flex; flex-direction: column; justify-content: flex-end; padding: 120px 5vw 72px; }
+    .hero-bg { position: absolute; inset: 0; z-index: 0; }
+    .hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
+    .hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(17,27,51,0.96) 0%, rgba(17,27,51,0.70) 45%, rgba(17,27,51,0.30) 100%); }
+    .hero-content { position: relative; z-index: 1; max-width: 720px; }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; margin-bottom: 20px; font-size: 0.78rem; color: rgba(255,255,255,0.45); }
+    .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+    .breadcrumb a:hover { color: rgba(255,255,255,0.8); }
+    .breadcrumb-sep { opacity: 0.4; }
+    .breadcrumb-current { color: var(--terracotta); font-weight: 600; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--terracotta); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 16px; }
+    .hero-eyebrow::before { content: ''; width: 28px; height: 2px; background: var(--terracotta); }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 5.5vw, 4.4rem); font-weight: 900; color: var(--white); line-height: 1.08; margin-bottom: 20px; }
+    .hero h1 em { font-style: normal; color: var(--terracotta); }
+    .hero-sub { color: rgba(255,255,255,0.70); font-size: 1rem; max-width: 520px; margin-bottom: 36px; line-height: 1.75; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 44px; }
+    .btn-primary { background: var(--terracotta); color: #fff; padding: 15px 30px; border-radius: 6px; font-size: 0.97rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: background 0.2s, transform 0.15s; }
+    .btn-primary:hover { background: var(--terra-light); transform: translateY(-2px); }
+    .btn-ghost { color: rgba(255,255,255,0.75); font-size: 0.92rem; text-decoration: none; display: inline-flex; align-items: center; gap: 7px; border: 1px solid rgba(255,255,255,0.2); padding: 14px 26px; border-radius: 6px; transition: color 0.2s, border-color 0.2s; }
+    .btn-ghost:hover { color: #fff; border-color: rgba(255,255,255,0.5); }
+    .hero-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .pill { display: flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.13); padding: 7px 14px; border-radius: 100px; color: rgba(255,255,255,0.80); font-size: 0.78rem; font-weight: 500; backdrop-filter: blur(4px); }
+    .pill svg { color: var(--terracotta); flex-shrink: 0; }
+
+    /* CERT STRIP */
+    .cert-strip { background: var(--white); border-bottom: 1px solid var(--border); padding: 20px 5vw; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px 36px; align-items: center; }
+    .cert-item { display: flex; align-items: center; gap: 9px; font-size: 0.82rem; font-weight: 600; color: var(--navy); }
+    .cert-badge { background: var(--navy); color: #fff; padding: 4px 10px; border-radius: 4px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; white-space: nowrap; }
+    .cert-badge.orange { background: var(--terracotta); }
+    .cert-badge.green { background: var(--green); }
+
+    /* SECTIONS */
+    .section { padding: 88px 5vw; }
+    .section-label { color: var(--terracotta); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+    .section-label::before { content: ''; width: 22px; height: 2px; background: var(--terracotta); }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.5vw, 2.7rem); font-weight: 700; color: var(--navy); line-height: 1.15; max-width: 580px; margin-bottom: 48px; }
+
+    /* SERVICES GRID */
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .service-card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 32px 28px; transition: box-shadow 0.2s, transform 0.2s; }
+    .service-card:hover { box-shadow: 0 12px 40px rgba(26,39,68,0.10); transform: translateY(-4px); }
+    .service-icon { width: 48px; height: 48px; background: rgba(196,96,58,0.08); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; color: var(--terracotta); }
+    .service-card h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+    .service-card p { color: var(--mid-gray); font-size: 0.87rem; line-height: 1.7; margin-bottom: 16px; }
+    .service-list { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+    .service-list li { font-size: 0.84rem; color: var(--charcoal); display: flex; align-items: flex-start; gap: 8px; }
+    .service-list li::before { content: '✓'; color: var(--terracotta); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+    /* SPLIT SECTION */
+    .split { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .split-img { border-radius: 16px; overflow: hidden; aspect-ratio: 4/3; }
+    .split-img img { width: 100%; height: 100%; object-fit: cover; }
+    .split-text .section-title { margin-bottom: 24px; }
+    .split-text p { color: var(--mid-gray); font-size: 0.93rem; line-height: 1.8; margin-bottom: 16px; }
+    .split-text p:last-of-type { margin-bottom: 32px; }
+    @media (max-width: 860px) { .split { grid-template-columns: 1fr; } .split-img { aspect-ratio: 16/9; } }
+
+    /* PROCESS */
+    .process-dark { background: var(--navy-deep); padding: 88px 5vw; }
+    .process-dark .section-label { color: rgba(255,255,255,0.4); }
+    .process-dark .section-label::before { background: rgba(255,255,255,0.2); }
+    .process-dark .section-title { color: var(--white); }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; margin-top: 8px; }
+    .step { position: relative; padding-left: 0; }
+    .step-num { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 900; color: rgba(196,96,58,0.25); line-height: 1; margin-bottom: 8px; }
+    .step h4 { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--white); margin-bottom: 8px; }
+    .step p { color: rgba(255,255,255,0.48); font-size: 0.86rem; line-height: 1.65; }
+
+    /* FAQ */
+    .faq-list { max-width: 700px; display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+    .faq-item { background: var(--white); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+    .faq-q { width: 100%; background: none; border: none; padding: 18px 22px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; text-align: left; gap: 16px; }
+    .faq-q span:first-child { font-family: 'Playfair Display', serif; font-size: 0.96rem; font-weight: 700; color: var(--navy); }
+    .faq-icon { color: var(--terracotta); font-size: 1.3rem; font-weight: 300; transition: transform 0.25s; flex-shrink: 0; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; padding: 0 22px; color: var(--mid-gray); font-size: 0.89rem; line-height: 1.75; }
+    .faq-item.open .faq-a { max-height: 300px; padding: 0 22px 18px; }
+
+    /* PRICING */
+    .pricing-strip { background: var(--white); padding: 88px 5vw; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px; }
+    .price-card { border: 1.5px solid var(--border); border-radius: 14px; padding: 28px 22px; text-align: center; position: relative; transition: box-shadow 0.2s, transform 0.2s; }
+    .price-card:hover { box-shadow: 0 10px 36px rgba(26,39,68,0.08); transform: translateY(-3px); }
+    .price-card.featured { border-color: var(--terracotta); }
+    .price-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--terracotta); color: #fff; font-size: 0.66rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; white-space: nowrap; }
+    .price-type { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--terracotta); margin-bottom: 4px; }
+    .price-label { font-family: 'Playfair Display', serif; font-size: 0.95rem; color: var(--navy); font-weight: 700; margin-bottom: 4px; }
+    .price-time { font-size: 0.74rem; color: var(--mid-gray); margin-bottom: 16px; line-height: 1.5; }
+    .price-amount { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 900; color: var(--navy); line-height: 1; }
+    .price-amount sup { font-size: 1.1rem; vertical-align: top; margin-top: 6px; display: inline-block; }
+    .price-note { font-size: 0.71rem; color: var(--mid-gray); margin: 6px 0 16px; }
+    .price-cta { display: block; background: var(--navy); color: #fff; padding: 11px; border-radius: 7px; font-size: 0.84rem; font-weight: 600; text-decoration: none; transition: background 0.2s; }
+    .price-cta:hover { background: var(--terracotta); }
+    .price-card.featured .price-cta { background: var(--terracotta); }
+    .price-card.featured .price-cta:hover { background: var(--terra-light); }
+    .pricing-note { margin-top: 20px; text-align: center; font-size: 0.76rem; color: var(--mid-gray); line-height: 1.7; }
+
+    /* CTA BAND */
+    .cta-band { background: var(--terracotta); padding: 72px 5vw; text-align: center; }
+    .cta-band h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 900; color: var(--white); margin-bottom: 14px; }
+    .cta-band p { color: rgba(255,255,255,0.80); font-size: 0.97rem; margin-bottom: 36px; }
+    .cta-actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+    .btn-white { background: var(--white); color: var(--terracotta); padding: 15px 30px; border-radius: 6px; font-size: 0.97rem; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: transform 0.15s; }
+    .btn-white:hover { transform: translateY(-2px); }
+    .btn-outline-white { border: 2px solid rgba(255,255,255,0.6); color: var(--white); padding: 14px 28px; border-radius: 6px; font-size: 0.97rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: border-color 0.2s; }
+    .btn-outline-white:hover { border-color: var(--white); }
+
+    /* OTHER SERVICES */
+    .other-services { padding: 88px 5vw; background: var(--linen); }
+    .services-nav { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 8px; }
+    .service-nav-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; display: flex; flex-direction: column; gap: 8px; transition: box-shadow 0.2s, transform 0.2s; }
+    .service-nav-card:hover { box-shadow: 0 8px 28px rgba(26,39,68,0.09); transform: translateY(-3px); }
+    .service-nav-tag { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--terracotta); }
+    .service-nav-card h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--navy); font-weight: 700; }
+    .service-nav-card p { font-size: 0.84rem; color: var(--mid-gray); line-height: 1.6; }
+    .service-nav-arrow { color: var(--terracotta); font-size: 1.1rem; margin-top: auto; }
+
+    /* STICKY BAR */
+    .sticky-bar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; background: var(--navy-deep); border-top: 2px solid var(--terracotta); padding: 14px 20px; display: flex; align-items: center; justify-content: center; gap: 12px; }
+    .sticky-bar a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1rem; display: flex; align-items: center; gap: 10px; }
+    .pulse { width: 9px; height: 9px; background: #4ade80; border-radius: 50%; animation: pulse 1.8s ease-in-out infinite; flex-shrink: 0; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.5)} }
+
+    /* FOOTER */
+    footer { background: #111; color: rgba(255,255,255,0.38); text-align: center; padding: 28px 5vw 80px; font-size: 0.8rem; line-height: 1.9; }
+    footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
+    footer a:hover { color: var(--terra-light); }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav aria-label="Navigazione principale">
+    <a href="/" class="nav-logo">Vanguard<span> Flow &amp; Spark</span></a>
+    <ul class="nav-links" role="list">
+      <li><a href="/" class="nav-back">← Home</a></li>
+      <li><a href="/impianti-idraulici">Idraulica</a></li>
+      <li><a href="/interventi-urgenti">Emergenze</a></li>
+      <li><a href="/ristrutturazioni">Ristrutturazioni</a></li>
+      <li><a href="/#contatti" class="nav-cta">Preventivo Gratuito</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Apri menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menu">
+    <a href="/" onclick="closeMenu()">Home</a>
+    <a href="/impianti-idraulici" onclick="closeMenu()">Idraulica</a>
+    <a href="/interventi-urgenti" onclick="closeMenu()">Emergenze</a>
+    <a href="/ristrutturazioni" onclick="closeMenu()">Ristrutturazioni</a>
+    <a href="/#contatti" class="mobile-cta" onclick="closeMenu()">Preventivo Gratuito</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Impianti Elettrici Nord Italia">
+    <div class="hero-bg" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1600&q=80&auto=format&fit=crop" alt="Elettricista professionista al lavoro su quadro elettrico" loading="eager" fetchpriority="high" width="1600" height="900" sizes="100vw" />
+    </div>
+    <div class="hero-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <span class="breadcrumb-current">Impianti Elettrici</span>
+      </nav>
+      <div class="hero-eyebrow">Servizi Elettrici</div>
+      <h1>Impianti elettrici<br /><em>a norma di legge.</em></h1>
+      <p class="hero-sub">Installazione, manutenzione e riparazione di impianti elettrici residenziali e commerciali. Certificati DM 37/2008. DICO rilasciata a fine lavori.</p>
+      <div class="hero-actions">
+        <a href="tel:+39XXXXXXXXXX" class="btn-primary" aria-label="Chiama ora">
+          <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.1 12 19.79 19.79 0 011.07 3.37a2 2 0 011.99-2.18H6a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16z"/></svg>
+          Chiama ora
+        </a>
+        <a href="/#contatti" class="btn-ghost">Richiedi preventivo scritto →</a>
+      </div>
+      <div class="hero-pills" role="list">
+        <div class="pill" role="listitem"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622C17.176 19.29 21 14.591 21 9c0-1.08-.128-2.116-.382-3.016z"/></svg> Cert. DM 37/2008</div>
+        <div class="pill" role="listitem"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Intervento in giornata</div>
+        <div class="pill" role="listitem"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 14H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v7a2 2 0 01-2 2h-4l-4 5-4-5z"/></svg> Preventivo gratuito</div>
+        <div class="pill" role="listitem">🛡️ Garanzia 2 anni</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERT STRIP -->
+  <div class="cert-strip" role="complementary">
+    <div class="cert-item"><span class="cert-badge">DM 37/2008</span> Impianti a norma di legge</div>
+    <div class="cert-item"><span class="cert-badge orange">DICO</span> Dichiarazione di conformità</div>
+    <div class="cert-item"><span class="cert-badge green">ISO 9001</span> Qualità certificata</div>
+    <div class="cert-item">🛡️ <strong>Garanzia 2 anni</strong> manodopera</div>
+    <div class="cert-item">🧾 <strong>Fattura con IVA</strong> — detrazioni 50–65%</div>
+  </div>
+
+  <!-- WHAT WE DO -->
+  <section class="section" id="servizi" aria-labelledby="servizi-title">
+    <div class="section-label" aria-hidden="true">Cosa facciamo</div>
+    <h2 class="section-title" id="servizi-title">Tutto ciò che riguarda l'impianto elettrico della tua casa o azienda.</h2>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M8 3v18M12 9h4M12 13h4"/></svg>
+        </div>
+        <h3>Quadri Elettrici</h3>
+        <p>Installazione e sostituzione di quadri elettrici domestici e industriali, differenziali e magnetotermici. Messa a norma impianti esistenti.</p>
+        <ul class="service-list">
+          <li>Sostituzione quadro obsoleto</li>
+          <li>Aggiunta differenziali e magnetotermici</li>
+          <li>Adeguamento DM 37/2008</li>
+          <li>Verifica e collaudo impianto</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h3>Cablaggio e Nuovi Punti Luce</h3>
+        <p>Posa di cavi, apertura tracce, installazione di nuovi punti luce, prese e interruttori. Impianti nuovi o estensione di quelli esistenti.</p>
+        <ul class="service-list">
+          <li>Nuovi punti luce e prese</li>
+          <li>Posa cavi sotto traccia</li>
+          <li>Impianti per cucine e bagni</li>
+          <li>Predisposizione per domotica</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        </div>
+        <h3>Messa a Terra e Verifica</h3>
+        <p>Progettazione e realizzazione dell'impianto di messa a terra. Verifica periodica degli impianti elettrici come previsto dalla normativa.</p>
+        <ul class="service-list">
+          <li>Realizzazione impianto di terra</li>
+          <li>Misurazione resistenza di terra</li>
+          <li>Verifica periodica obbligatoria</li>
+          <li>Rilascio documentazione di conformità</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="6" rx="1"/><rect x="9" y="16" width="6" height="6" rx="1"/><rect x="2" y="9" width="6" height="6" rx="1"/><rect x="16" y="9" width="6" height="6" rx="1"/></svg>
+        </div>
+        <h3>Prese, Interruttori e Plafoniere</h3>
+        <p>Sostituzione e installazione di prese, interruttori, dimmer e plafoniere. Aggiornamento estetico e funzionale dei componenti.</p>
+        <ul class="service-list">
+          <li>Sostituzione prese e interruttori</li>
+          <li>Installazione dimmer e deviatori</li>
+          <li>Prese USB e multimediali</li>
+          <li>Illuminazione LED su misura</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>Impianti Residenziali Completi</h3>
+        <p>Realizzazione dell'impianto elettrico completo per nuove costruzioni o ristrutturazioni, dalla progettazione alla certificazione finale.</p>
+        <ul class="service-list">
+          <li>Progettazione impianto</li>
+          <li>Posa cavi e quadro elettrico</li>
+          <li>Collaudo e DICO</li>
+          <li>Assistenza post-lavori</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+        </div>
+        <h3>Impianti Commerciali e Industriali</h3>
+        <p>Interventi su impianti elettrici per uffici, negozi, capannoni e strutture ricettive. Gestione di potenze elevate e cablaggi strutturati.</p>
+        <ul class="service-list">
+          <li>Uffici e negozi</li>
+          <li>Strutture ricettive e hotel</li>
+          <li>Capannoni industriali</li>
+          <li>Impianti fotovoltaici e storage</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SPLIT: WHY -->
+  <section style="background: var(--white); padding: 88px 5vw;" aria-labelledby="why-title">
+    <div class="split">
+      <div class="split-img">
+        <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=700&q=80&auto=format&fit=crop" alt="Nuovo quadro elettrico installato da Vanguard Flow & Spark" loading="lazy" width="700" height="525" />
+      </div>
+      <div class="split-text">
+        <div class="section-label" aria-hidden="true">Perché sceglierci</div>
+        <h2 class="section-title" id="why-title">Certificati, puntuali, e con garanzia scritta.</h2>
+        <p>Operiamo in conformità al Decreto Ministeriale n. 37 del 22 gennaio 2008. Al termine di ogni lavoro rilasciamo la <strong>Dichiarazione di Conformità (DICO)</strong> — documento obbligatorio per legge che certifica la sicurezza e la regolarità dell'impianto.</p>
+        <p>La DICO è fondamentale per: stipulare assicurazioni sulla casa, vendere o affittare un immobile, richiedere detrazioni fiscali IRPEF, e per la vostra sicurezza in caso di sinistro.</p>
+        <a href="/#contatti" class="btn-primary" style="display:inline-flex;">Richiedi preventivo gratuito →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process-dark" aria-labelledby="process-title">
+    <div class="section-label" aria-hidden="true">Come lavoriamo</div>
+    <h2 class="section-title" id="process-title">Dal sopralluogo alla DICO, senza pensieri.</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num" aria-hidden="true">01</div><h4>Sopralluogo gratuito</h4><p>Valutiamo l'impianto esistente, le esigenze e lo stato dei locali. Nessun costo per il sopralluogo.</p></div>
+      <div class="step"><div class="step-num" aria-hidden="true">02</div><h4>Preventivo dettagliato</h4><p>Ricevi un preventivo scritto e trasparente con tutti i costi. Nessuna voce nascosta.</p></div>
+      <div class="step"><div class="step-num" aria-hidden="true">03</div><h4>Intervento puntuale</h4><p>Arriviamo all'orario concordato con tutti i materiali. Lavoriamo in modo ordinato e pulito.</p></div>
+      <div class="step"><div class="step-num" aria-hidden="true">04</div><h4>DICO e garanzia</h4><p>Rilasciamo la dichiarazione di conformità e la garanzia 2 anni sulla manodopera.</p></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" aria-labelledby="faq-title" style="background: var(--linen);">
+    <div class="section-label" aria-hidden="true">Domande frequenti</div>
+    <h2 class="section-title" id="faq-title">Tutto quello che vuoi sapere sugli impianti elettrici.</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-e1">
+          <span>Cos'è la DICO e perché è importante?</span><span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-e1" role="region">La Dichiarazione di Conformità (DICO) è il documento che certifica che l'impianto elettrico è stato realizzato a regola d'arte e in conformità alle norme vigenti. È obbligatoria per legge dal DM 37/2008 e indispensabile per assicurare l'immobile, venderlo o affittarlo.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-e2">
+          <span>Ogni quanto va verificato l'impianto elettrico?</span><span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-e2" role="region">La normativa prevede verifiche periodiche obbligatorie ogni 5 anni per le abitazioni in affitto, ogni 2 anni per le attività commerciali, e ogni anno per ambienti a rischio. Per le abitazioni di proprietà non è previsto un obbligo ma è fortemente consigliata ogni 10 anni.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-e3">
+          <span>Posso detrarre le spese per l'impianto elettrico?</span><span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-e3" role="region">Sì. Gli interventi sugli impianti elettrici nelle abitazioni residenziali possono beneficiare della detrazione IRPEF del 50% (ristrutturazione edilizia) o del 65% (miglioramento efficienza energetica). Forniamo tutta la documentazione necessaria, inclusa la DICO.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-e4">
+          <span>Quanto tempo richiede la rifazione completa di un impianto?</span><span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-e4" role="region">Per un appartamento di medie dimensioni (80–120 mq) la rifazione completa richiede generalmente 3–5 giorni lavorativi, inclusi gli interventi su intonaco e la pulizia finale. Per interventi parziali o sostituzioni del quadro si parla di poche ore.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-e5">
+          <span>Lavorate anche su impianti commerciali e industriali?</span><span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-e5" role="region">Sì, operiamo su uffici, negozi, strutture ricettive e capannoni industriali. Per gli impianti commerciali e industriali effettuiamo sopralluogo gratuito e preventivo personalizzato, con gestione delle pratiche amministrative.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing-strip" aria-labelledby="prezzi-title">
+    <div class="section-label" aria-hidden="true">Tariffe</div>
+    <h2 class="section-title" id="prezzi-title">Prezzi trasparenti, nessuna sorpresa.</h2>
+    <p style="color:var(--mid-gray);font-size:0.91rem;margin-top:-36px;margin-bottom:40px;max-width:520px;">Tariffe fisse inclusive di chiamata e prima ora. IVA esclusa.</p>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-type">Feriale Diurno</div>
+        <div class="price-label">Intervento Standard</div>
+        <div class="price-time">Lun–Sab · 08:00–20:00</div>
+        <div class="price-amount"><sup>€</sup>89</div>
+        <div class="price-note">+ IVA · 1ª ora inclusa</div>
+        <a href="/#contatti" class="price-cta">Richiedi intervento →</a>
+      </div>
+      <div class="price-card featured">
+        <div class="price-badge">⚡ Più richiesto</div>
+        <div class="price-type">Festivo Diurno</div>
+        <div class="price-label">Intervento Domenica</div>
+        <div class="price-time">Dom &amp; Festivi · 08:00–20:00</div>
+        <div class="price-amount"><sup>€</sup>119</div>
+        <div class="price-note">+ IVA · 1ª ora inclusa</div>
+        <a href="/#contatti" class="price-cta">Richiedi intervento →</a>
+      </div>
+      <div class="price-card">
+        <div class="price-type">Feriale Notturno</div>
+        <div class="price-label">Emergenza Notte</div>
+        <div class="price-time">Lun–Sab · 20:00–08:00</div>
+        <div class="price-amount"><sup>€</sup>149</div>
+        <div class="price-note">+ IVA · 1ª ora inclusa</div>
+        <a href="/#contatti" class="price-cta">Richiedi intervento →</a>
+      </div>
+      <div class="price-card">
+        <div class="price-type">Festivo Notturno</div>
+        <div class="price-label">Emergenza Festiva</div>
+        <div class="price-time">Dom &amp; Festivi · 20:00–08:00</div>
+        <div class="price-amount"><sup>€</sup>189</div>
+        <div class="price-note">+ IVA · 1ª ora inclusa</div>
+        <a href="/#contatti" class="price-cta">Richiedi intervento →</a>
+      </div>
+    </div>
+    <p class="pricing-note">* Tariffe inclusive di chiamata e prima ora. Materiali e ore aggiuntive quotati nel preventivo.</p>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band" aria-labelledby="cta-title">
+    <h2 id="cta-title">Hai bisogno di un elettricista?</h2>
+    <p>Chiamaci o inviaci un messaggio. Preventivo gratuito, risposta in poche ore.</p>
+    <div class="cta-actions">
+      <a href="tel:+39XXXXXXXXXX" class="btn-white">
+        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.1 12 19.79 19.79 0 011.07 3.37a2 2 0 011.99-2.18H6a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16z"/></svg>
+        Chiama ora
+      </a>
+      <a href="/#contatti" class="btn-outline-white">Richiedi preventivo scritto →</a>
+    </div>
+  </section>
+
+  <!-- OTHER SERVICES -->
+  <section class="other-services" aria-labelledby="altri-title">
+    <div class="section-label" aria-hidden="true">Altri servizi</div>
+    <h2 class="section-title" id="altri-title">Tutto in un unico numero.</h2>
+    <div class="services-nav">
+      <a href="/impianti-idraulici" class="service-nav-card">
+        <div class="service-nav-tag">Idraulica</div>
+        <h3>Impianti Idraulici</h3>
+        <p>Perdite, rubinetti, sanitari, scarichi. Intervento rapido su tutta la rete idrica.</p>
+        <div class="service-nav-arrow" aria-hidden="true">→</div>
+      </a>
+      <a href="/interventi-urgenti" class="service-nav-card">
+        <div class="service-nav-tag">Emergenza</div>
+        <h3>Interventi Urgenti</h3>
+        <p>Guasti improvvisi, blackout, perdite. Disponibili 7 giorni su 7.</p>
+        <div class="service-nav-arrow" aria-hidden="true">→</div>
+      </a>
+      <a href="/ristrutturazioni" class="service-nav-card">
+        <div class="service-nav-tag">Ristrutturazione</div>
+        <h3>Ristrutturazioni</h3>
+        <p>Impianto elettrico e idraulico chiavi in mano per bagni, cucine e nuove costruzioni.</p>
+        <div class="service-nav-arrow" aria-hidden="true">→</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <p>© 2026 <strong>Vanguard Flow &amp; Spark</strong> · P.IVA XXXXXXXXXXX · <a href="mailto:info@nordtecnici.it">info@nordtecnici.it</a></p>
+    <p>Tutti i diritti riservati · <a href="#">Privacy Policy</a> · <a href="#">Cookie Policy</a> · Certificati DM 37/2008</p>
+  </footer>
+
+  <!-- STICKY BAR -->
+  <div class="sticky-bar" role="complementary" aria-label="Chiama ora">
+    <div class="pulse" aria-hidden="true"></div>
+    <a href="tel:+39XXXXXXXXXX" aria-label="Chiama ora">
+      <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.1 12 19.79 19.79 0 011.07 3.37a2 2 0 011.99-2.18H6a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16z"/></svg>
+      Chiama ora — +39 XXX XXX XXXX
+    </a>
+  </div>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    function closeMenu() {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
+    }
+  </script>
+</body>
+</html>
