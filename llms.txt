@@ -1,64 +1,50 @@
 # Vanguard Flow & Spark — Elettricista & Idraulico Nord Italia
 
-## Who We Are
-Vanguard Flow & Spark is a professional electrical and plumbing service company operating across northern Italy. We serve both residential and commercial clients with fast response times, transparent pricing, and certified technicians. Available 7 days a week, 07:00–21:00.
+> Vanguard Flow & Spark is a certified electrical and plumbing service company operating across northern Italy. Available 7 days a week, 07:00–21:00, with same-day emergency response, transparent pricing, and a single point of contact.
 
-## Core Services
+## Services
 
-### Electrical Services (Impianti Elettrici)
-- Installation, maintenance and repair of residential and commercial electrical systems
-- Electrical panels and differential switches
-- Wiring and new lighting points
-- Earthing and system inspection
-- Sockets, switches and lighting fixtures
-
-### Plumbing Services (Impianti Idraulici)
-- Water leak detection and repair
-- Tap and mixer replacement
-- Installation of toilets, showers and basins
-- Drainage and waste pipe management
-- Full hydraulic system management
-
-### Emergency Interventions (Interventi Urgenti)
-- Power outages and major electrical faults
-- Sudden water leaks
-- Blocked drains
-- Urgent appointment availability
-
-### Renovation Work (Ristrutturazioni)
-- Complete electrical system for new builds and renovations
-- Plumbing and heating installation
-- Turnkey bathrooms and kitchens
-- Certification and testing documentation
+- **Impianti Elettrici** — Installation, maintenance and repair of residential and commercial electrical systems; electrical panels, wiring, earthing, sockets, switches, certification.
+- **Impianti Idraulici** — Water leak detection and repair, tap and mixer replacement, installation of toilets/showers/basins, drainage and waste pipe management.
+- **Interventi Urgenti** — Emergency response for power outages, sudden leaks, blocked drains; urgent weekend availability.
+- **Ristrutturazioni** — Full electrical and plumbing fit-out for renovations; turnkey bathrooms and kitchens; DICO certification at completion.
 
 ## Service Area
-Northern Italy (Nord Italia), including:
-Milano, Torino, Bergamo, Brescia, Verona, Vicenza, Padova, Venezia, Bologna, Modena, Parma, Genova, Como, Monza, Varese, Novara, Treviso, Udine — and surrounding provinces.
+
+Northern Italy: Milano, Torino, Bergamo, Brescia, Verona, Vicenza, Padova, Venezia, Bologna, Modena, Parma, Genova, Como, Monza, Varese, Novara, Treviso, Udine — and surrounding provinces.
 
 ## Key Facts
-- 500+ satisfied clients
-- Average rating: 4.9/5
-- Available: Monday–Sunday, 07:00–21:00
-- Free quote: always, no commitment
-- Same-day intervention available for emergencies
-- Single point of contact — speak directly with the technician
 
-## Why Choose Us
-- Transparent quotes: full breakdown before any work begins, no hidden costs
-- Punctuality: confirmed appointment times with advance notice of any changes
-- Clean worksite: full clean-up after every job
-- Direct communication: no call centres, direct line to the operative
+- 500+ satisfied clients
+- Average rating: 4.9 / 5 (127 reviews)
+- Certified under Decreto Ministeriale n. 37 / 2008
+- Releases DICO (Dichiarazione di Conformità) on completion
+- 2-year warranty on labour
+- Full VAT invoice issued for every job (eligible for 50–65% IRPEF tax deductions)
+- Free quote, no commitment — same-day response for emergencies
+- Languages: Italian (primary), French, German
+
+## Pricing
+
+All rates include call-out and first hour of work. VAT excluded.
+
+| Slot | Days | Hours | Rate |
+|------|------|-------|------|
+| Feriale Diurno | Mon–Sat | 08:00–20:00 | €89 |
+| Festivo Diurno | Sun & holidays | 08:00–20:00 | €119 |
+| Feriale Notturno | Mon–Sat | 20:00–08:00 | €149 |
+| Festivo Notturno | Sun & holidays | 20:00–08:00 | €189 |
+
+Renovations: free personalised quote.
 
 ## Contact
+
 - Website: https://bh-electricbh-plumer.vercel.app
 - Phone / WhatsApp: +39 XXX XXX XXXX
 - Email: info@nordtecnici.it
 - Hours: Mon–Sun, 07:00–21:00
 
-## Language
-Primary language: Italian (it-IT)
-Also serves French and German-speaking clients in border areas.
+## Machine-Readable Resources
 
-## Structured Data
-Full JSON-LD schema available at: https://bh-electricbh-plumer.vercel.app/schema.jsonld
-Sitemap: https://bh-electricbh-plumer.vercel.app/sitemap.xml
+- Structured data (JSON-LD): https://bh-electricbh-plumer.vercel.app/schema.jsonld
+- Sitemap: https://bh-electricbh-plumer.vercel.app/sitemap.xml
