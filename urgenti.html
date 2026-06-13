@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interventi Urgenti Nord Italia – Elettricista & Idraulico H24 | Vanguard Flow & Spark</title>
+  <meta name="description" content="Guasto elettrico o perdita d'acqua improvvisa? Interveniamo in tempi rapidi, 7 giorni su 7. Elettricista e idraulico di emergenza su Milano, Torino, Bergamo e tutto il nord Italia." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://bh-electricbh-plumer.vercel.app/interventi-urgenti" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231A2744'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='serif' font-weight='bold' font-size='18' fill='%23C4603A'>V</text></svg>" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Interventi Urgenti – Vanguard Flow & Spark" />
+  <meta property="og:description" content="Guasto improvviso? Interveniamo rapidamente. Elettricista e idraulico 7 giorni su 7 in tutto il nord Italia." />
+  <meta property="og:url" content="https://bh-electricbh-plumer.vercel.app/interventi-urgenti" />
+  <meta property="og:image" content="https://bh-electricbh-plumer.vercel.app/og-image.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Interventi Urgenti Elettrici e Idraulici",
+    "serviceType": "Pronto intervento elettrico e idraulico",
+    "description": "Intervento rapido per guasti elettrici, perdite d'acqua, blackout e scarichi ostruiti. Disponibili 7 giorni su 7.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Vanguard Flow & Spark",
+      "url": "https://bh-electricbh-plumer.vercel.app",
+      "telephone": "+39-XXX-XXX-XXXX",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "07:00", "closes": "21:00"
+      }
+    },
+    "areaServed": {"@type": "Country", "name": "Italy"}
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://bh-electricbh-plumer.vercel.app/"},
+      {"@type": "ListItem", "position": 2, "name": "Interventi Urgenti", "item": "https://bh-electricbh-plumer.vercel.app/interventi-urgenti"}
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1600&q=80&auto=format&fit=crop" fetchpriority="high" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #1A2744; --navy-deep: #111B33; --terracotta: #C4603A;
+      --terra-light: #D97A55; --linen: #F7F4EE; --charcoal: #1C1C1C;
+      --mid-gray: #6B7280; --white: #FFFFFF; --border: #E2DDD6; --green: #2d6a3f;
+      --alert: #DC2626;
+    }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { font-family: 'Inter', sans-serif; background: var(--linen); color: var(--charcoal); line-height: 1.6; overflow-x: hidden; }
+    img { display: block; max-width: 100%; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 99; background: rgba(17,27,51,0.97); backdrop-filter: blur(10px); padding: 0 5vw; height: 64px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .nav-logo { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.15rem; color: var(--white); letter-spacing: 0.02em; text-decoration: none; }
+    .nav-logo span { color: var(--terracotta); }
+    .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+    .nav-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { background: var(--terracotta) !important; color: #fff !important; padding: 9px 20px; border-radius: 6px; font-weight: 600 !important; }
+    .nav-back { color: rgba(255,255,255,0.5) !important; font-size: 0.82rem !important; }
+    .nav-hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 40px; height: 40px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-hamburger span { display: block; width: 24px; height: 2px; background: #fff; border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu { display: none; position: fixed; inset: 0; z-index: 105; background: var(--navy-deep); flex-direction: column; align-items: center; justify-content: center; gap: 36px; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { color: #fff; text-decoration: none; font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; }
+    .mobile-menu .mobile-cta { background: var(--terracotta); padding: 16px 40px; border-radius: 8px; font-size: 1.2rem !important; }
+    @media (max-width: 768px) { .nav-links { display: none; } .nav-hamburger { display: flex; } }
+
+    /* HERO — red urgency tint */
+    .hero { min-height: 80vh; position: relative; display: flex; flex-direction: column; justify-content: flex-end; padding: 120px 5vw 72px; }
+    .hero-bg { position: absolute; inset: 0; z-index: 0; }
+    .hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+    .hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(17,27,51,0.97) 0%, rgba(60,10,10,0.75) 45%, rgba(17,27,51,0.40) 100%); }
+    .hero-content { position: relative; z-index: 1; max-width: 720px; }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; margin-bottom: 20px; font-size: 0.78rem; color: rgba(255,255,255,0.45); }
+    .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+    .breadcrumb-current { color: var(--terracotta); font-weight: 600; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; color: #f87171; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 16px; }
+    .hero-eyebrow::before { content: ''; width: 28px; height: 2px; background: #f87171; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 5.5vw, 4.4rem); font-weight: 900; color: var(--white); line-height: 1.08; margin-bottom: 20px; }
+    .hero h1 em { font-style: normal; color: #f87171; }
+    .hero-sub { color: rgba(255,255,255,0.70); font-size: 1rem; max-width: 520px; margin-bottom: 36px; line-height: 1.75; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 44px; }
+    .btn-urgent { background: var(--alert); color: #fff; padding: 16px 32px; border-radius: 6px; font-size: 1.05rem; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: background 0.2s, transform 0.15s; animation: urgentPulse 2.5s ease-in-out infinite; }
+    .btn-urgent:hover { background: #b91c1c; transform: translateY(-2px); animation: none; }
+    @keyframes urgentPulse { 0%,100%{box-shadow:0 0 0 0 rgba(220,38,38,0.4)} 50%{box-shadow:0 0 0 10px rgba(220,38,38,0)} }
+    .btn-ghost { color: rgba(255,255,255,0.75); font-size: 0.92rem; text-decoration: none; display: inline-flex; align-items: center; gap: 7px; border: 1px solid rgba(255,255,255,0.2); padding: 14px 26px; border-radius: 6px; transition: color 0.2s, border-color 0.2s; }
+    .btn-ghost:hover { color: #fff; border-color: rgba(255,255,255,0.5); }
+    .hero-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .pill { display: flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.13); padding: 7px 14px; border-radius: 100px; color: rgba(255,255,255,0.80); font-size: 0.78rem; font-weight: 500; backdrop-filter: blur(4px); }
+
+    /* ALERT BAND */
+    .alert-band { background: var(--alert); padding: 20px 5vw; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px 32px; }
+    .alert-band-text { color: #fff; font-weight: 700; font-size: 0.92rem; display: flex; align-items: center; gap: 8px; }
+    .alert-band a { color: #fff; font-weight: 800; font-size: 1.05rem; text-decoration: none; background: rgba(255,255,255,0.18); padding: 8px 20px; border-radius: 6px; transition: background 0.2s; }
+    .alert-band a:hover { background: rgba(255,255,255,0.28); }
+
+    .section { padding: 88px 5vw; }
+    .section-label { color: var(--terracotta); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+    .section-label::before { content: ''; width: 22px; height: 2px; background: var(--terracotta); }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.5vw, 2.7rem); font-weight: 700; color: var(--navy); line-height: 1.15; max-width: 580px; margin-bottom: 48px; }
+
+    .emergency-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 20px; }
+    .emergency-card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 32px 28px; border-left: 4px solid var(--terracotta); transition: box-shadow 0.2s, transform 0.2s; }
+    .emergency-card:hover { box-shadow: 0 12px 40px rgba(26,39,68,0.10); transform: translateY(-4px); }
+    .emergency-icon { font-size: 2rem; margin-bottom: 14px; display: block; }
+    .emergency-card h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+    .emergency-card p { color: var(--mid-gray); font-size: 0.87rem; line-height: 1.7; margin-bottom: 14px; }
+    .emergency-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+    .emergency-list li { font-size: 0.84rem; color: var(--charcoal); display: flex; align-items: flex-start; gap: 8px; }
+    .emergency-list li::before { content: '⚡'; flex-shrink: 0; margin-top: 1px; }
+    .emergency-card.plumbing .emergency-list li::before { content: '💧'; }
+
+    /* RESPONSE TIME */
+    .response-section { background: var(--navy-deep); padding: 88px 5vw; }
+    .response-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; margin-top: 8px; }
+    .response-stat { text-align: center; }
+    .response-num { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 900; color: var(--terracotta); line-height: 1; margin-bottom: 8px; }
+    .response-label { color: var(--white); font-size: 1rem; font-weight: 600; margin-bottom: 6px; }
+    .response-sub { color: rgba(255,255,255,0.45); font-size: 0.84rem; line-height: 1.5; }
+    .response-section .section-label { color: rgba(255,255,255,0.4); }
+    .response-section .section-label::before { background: rgba(255,255,255,0.2); }
+    .response-section .section-title { color: var(--white); }
+
+    .split { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .split-img { border-radius: 16px; overflow: hidden; aspect-ratio: 4/3; }
+    .split-img img { width: 100%; height: 100%; object-fit: cover; }
+    .split-text .section-title { margin-bottom: 24px; }
+    .split-text p { color: var(--mid-gray); font-size: 0.93rem; line-height: 1.8; margin-bottom: 16px; }
+    .split-text p:last-of-type { margin-bottom: 32px; }
+    @media (max-width: 860px) { .split { grid-template-columns: 1fr; } .split-img { aspect-ratio: 16/9; } }
+
+    .pricing-strip { background: var(--white); padding: 88px 5vw; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px; }
+    .price-card { border: 1.5px solid var(--border); border-radius: 14px; padding: 28px 22px; text-align: center; position: relative; transition: box-shadow 0.2s, transform 0.2s; }
+    .price-card:hover { box-shadow: 0 10px 36px rgba(26,39,68,0.08); transform: translateY(-3px); }
+    .price-card.featured { border-color: var(--terracotta); }
+    .price-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--terracotta); color: #fff; font-size: 0.66rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; white-space: nowrap; }
+    .price-type { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--terracotta); margin-bottom: 4px; }
+    .price-label { font-family: 'Playfair Display', serif; font-size: 0.95rem; color: var(--navy); font-weight: 700; margin-bottom: 4px; }
+    .price-time { font-size: 0.74rem; color: var(--mid-gray); margin-bottom: 16px; line-height: 1.5; }
+    .price-amount { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 900; color: var(--navy); line-height: 1; }
+    .price-amount sup { font-size: 1.1rem; vertical-align: top; margin-top: 6px; display: inline-block; }
+    .price-note { font-size: 0.71rem; color: var(--mid-gray); margin: 6px 0 16px; }
+    .price-cta { display: block; background: var(--navy); color: #fff; padding: 11px; border-radius: 7px; font-size: 0.84rem; font-weight: 600; text-decoration: none; transition: background 0.2s; }
+    .price-cta:hover { background: var(--terracotta); }
+    .price-card.featured .price-cta { background: var(--terracotta); }
+    .price-card.featured .price-cta:hover { background: var(--terra-light); }
+    .pricing-note { margin-top: 20px; text-align: center; font-size: 0.76rem; color: var(--mid-gray); line-height: 1.7; }
+
+    .cta-band { background: var(--alert); padding: 72px 5vw; text-align: center; }
+    .cta-band h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 900; color: var(--white); margin-bottom: 14px; }
+    .cta-band p { color: rgba(255,255,255,0.85); font-size: 0.97rem; margin-bottom: 36px; }
+    .cta-actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+    .btn-white { background: var(--white); color: var(--alert); padding: 16px 32px; border-radius: 6px; font-size: 1.05rem; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: transform 0.15s; }
+    .btn-white:hover { transform: translateY(-2px); }
+    .btn-outline-white { border: 2px solid rgba(255,255,255,0.6); color: var(--white); padding: 14px 28px; border-radius: 6px; font-size: 0.97rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: border-color 0.2s; }
+    .btn-outline-white:hover { border-color: var(--white); }
+
+    .other-services { padding: 88px 5vw; background: var(--linen); }
+    .services-nav { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 8px; }
+    .service-nav-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; display: flex; flex-direction: column; gap: 8px; transition: box-shadow 0.2s, transform 0.2s; }
+    .service-nav-card:hover { box-shadow: 0 8px 28px rgba(26,39,68,0.09); transform: translateY(-3px); }
+    .service-nav-tag { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--terracotta); }
+    .service-nav-card h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--navy); font-weight: 700; }
+    .service-nav-card p { font-size: 0.84rem; color: var(--mid-gray); line-height: 1.6; }
+    .service-nav-arrow { color: var(--terracotta); font-size: 1.1rem; margin-top: auto; }
+
+    .sticky-bar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; background: var(--alert); border-top: 2px solid #b91c1c; padding: 14px 20px; display: flex; align-items: center; justify-content: center; gap: 12px; }
+    .sticky-bar a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1rem; display: flex; align-items: center; gap: 10px; }
+    .pulse { width: 9px; height: 9px; background: #fff; border-radius: 50%; animation: pulse 1.2s ease-in-out infinite; flex-shrink: 0; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(1.6)} }
+    footer { background: #111; color: rgba(255,255,255,0.38); text-align: center; padding: 28px 5vw 80px; font-size: 0.8rem; line-height: 1.9; }
+    footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
+    footer a:hover { color: var(--terra-light); }
+  </style>
+</head>
+<body>
+
+  <nav aria-label="Navigazione principale">
+    <a href="/" class="nav-logo">Vanguard<span> Flow &amp; Spark</span></a>
+    <ul class="nav-links" role="list">
+      <li><a href="/" class="nav-back">← Home</a></li>
+      <li><a href="/impianti-elettrici">Elettricità</a></li>
+      <li><a href="/impianti-idraulici">Idraulica</a></li>
+      <li><a href="/ristrutturazioni">Ristrutturazioni</a></li>
+      <li><a href="tel:+39XXXXXXXXXX" class="nav-cta">📞 Chiama ora</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Apri menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menu">
+    <a href="/" onclick="closeMenu()">Home</a>
+    <a href="/impianti-elettrici" onclick="closeMenu()">Elettricità</a>
+    <a href="/impianti-idraulici" onclick="closeMenu()">Idraulica</a>
+    <a href="/ristrutturazioni" onclick="closeMenu()">Ristrutturazioni</a>
+    <a href="tel:+39XXXXXXXXXX" class="mobile-cta" onclick="closeMenu()">📞 Chiama ora</a>
+  </div>
+
+  <section class="hero" aria-label="Interventi Urgenti Nord Italia">
+    <div class="hero-bg" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1600&q=80&auto=format&fit=crop" alt="Tecnico in intervento di emergenza" loading="eager" fetchpriority="high" width="1600" height="900" sizes="100vw" />
+    </div>
+    <div class="hero-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span aria-hidden="true"> › </span><span class="breadcrumb-current">Interventi Urgenti</span>
+      </nav>
+      <div class="hero-eyebrow">🚨 Pronto Intervento</div>
+      <h1>Guasto adesso?<br /><em>Arriviamo subito.</em></h1>
+      <p class="hero-sub">Blackout improvviso, perdita d'acqua, scarico ostruito. Siamo disponibili 7 giorni su 7 dalle 07:00 alle 21:00. Una sola chiamata, risposta immediata.</p>
+      <div class="hero-actions">
+        <a href="tel:+39XXXXXXXXXX" class="btn-urgent" aria-label="Chiama ora per emergenza">
+          <svg width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.1 12 19.79 19.79 0 011.07 3.37a2 2 0 011.99-2.18H6a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16z"/></svg>
+          Chiama ora — Emergenza
+        </a>
+        <a href="/#contatti" class="btn-ghost">Scrivi un messaggio →</a>
+      </div>
+      <div class="hero-pills" role="list">
+        <div class="pill" role="listitem">🚨 Risposta immediata</div>
+        <div class="pill" role="listitem">📅 7 giorni su 7</div>
+        <div class="pill" role="listitem">🕖 07:00–21:00</div>
+        <div class="pill" role="listitem">🛡️ Garanzia su ogni intervento</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALERT BAND -->
+  <div class="alert-band" role="complementary">
+    <div class="alert-band-text">🚨 Emergenza in corso? Non aspettare.</div>
+    <a href="tel:+39XXXXXXXXXX" aria-label="Chiama ora">📞 +39 XXX XXX XXXX</a>
+    <div class="alert-band-text">Risposta immediata · Lun–Dom · 07:00–21:00</div>
+  </div>
+
+  <!-- EMERGENCIES -->
+  <section class="section" id="servizi" aria-labelledby="servizi-title">
+    <div class="section-label" aria-hidden="true">Interveniamo su</div>
+    <h2 class="section-title" id="servizi-title">Ogni tipo di guasto, nel minor tempo possibile.</h2>
+    <div class="emergency-grid">
+
+      <div class="emergency-card">
+        <span class="emergency-icon" aria-hidden="true">⚡</span>
+        <h3>Blackout e Guasti Elettrici</h3>
+        <p>Perdita improvvisa di corrente, differenziale che scatta continuamente, cortocircuito localizzato. Interveniamo per ripristinare la corrente e mettere in sicurezza l'impianto.</p>
+        <ul class="emergency-list">
+          <li>Blackout parziale o totale</li>
+          <li>Differenziale che non regge</li>
+          <li>Cortocircuiti e fumi da prese</li>
+          <li>Guasti a quadro elettrico</li>
+        </ul>
+      </div>
+
+      <div class="emergency-card plumbing">
+        <span class="emergency-icon" aria-hidden="true">💧</span>
+        <h3>Perdite d'Acqua Improvvise</h3>
+        <p>Tubazione rotta, raccordo ceduto, infiltrazione improvvisa. Ogni minuto conta: interveniamo rapidamente per ridurre il danno e risolvere il problema alla radice.</p>
+        <ul class="emergency-list plumbing">
+          <li>Tubazione rotta o ceduta</li>
+          <li>Perdita sotto traccia o a soffitto</li>
+          <li>Raccordi e valvole che perdono</li>
+          <li>Infiltrazioni da colonne condominiali</li>
+        </ul>
+      </div>
+
+      <div class="emergency-card plumbing">
+        <span class="emergency-icon" aria-hidden="true">🚿</span>
+        <h3>Scarichi Ostruiti</h3>
+        <p>Bagno, cucina, doccia o lavandino che non scaricano. Interveniamo con strumenti professionali per risolvere l'ostruzione senza danneggiare le tubazioni.</p>
+        <ul class="emergency-list plumbing">
+          <li>WC intasato</li>
+          <li>Lavandino o doccia che non scarica</li>
+          <li>Colonna condominiale ostruita</li>
+          <li>Cattivi odori da scarichi</li>
+        </ul>
+      </div>
+
+      <div class="emergency-card">
+        <span class="emergency-icon" aria-hidden="true">🔌</span>
+        <h3>Guasti a Prese e Interruttori</h3>
+        <p>Presa bruciata, interruttore che non funziona, cavo scoperto o danneggiato. Situazioni che non vanno ignorate per la sicurezza dell'impianto e delle persone.</p>
+        <ul class="emergency-list">
+          <li>Prese bruciate o scintillanti</li>
+          <li>Interruttori non funzionanti</li>
+          <li>Cavi scoperti o danneggiati</li>
+          <li>Odore di bruciato da pareti</li>
+        </ul>
+      </div>
+
+      <div class="emergency-card plumbing">
+        <span class="emergency-icon" aria-hidden="true">🌡️</span>
+        <h3>Caldaia e Riscaldamento Fermi</h3>
+        <p>Caldaia che si spegne, niente acqua calda, riscaldamento assente. Diagnostichiamo il guasto e ripristiniamo il funzionamento nel minor tempo possibile.</p>
+        <ul class="emergency-list plumbing">
+          <li>Caldaia spenta o in blocco</li>
+          <li>Assenza acqua calda sanitaria</li>
+          <li>Pressione impianto azzerata</li>
+          <li>Radiatori freddi nonostante caldaia accesa</li>
+        </ul>
+      </div>
+
+      <div class="emergency-card">
+        <span class="emergency-icon" aria-hidden="true">🏠</span>
+        <h3>Guasti nei Weekend e Festivi</h3>
+        <p>I guasti non aspettano il lunedì. Siamo disponibili anche sabato, domenica e durante i giorni festivi, senza costi aggiuntivi nascosti rispetto alla tariffa festiva standard.</p>
+        <ul class="emergency-list">
+          <li>Sabato e domenica</li>
+          <li>Giorni festivi nazionali</li>
+          <li>Ponti e festività locali</li>
+          <li>Emergenze anche serali (fino alle 21:00)</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RESPONSE TIMES -->
+  <section class="response-section" aria-labelledby="response-title">
+    <div class="section-label" aria-hidden="true">Tempi di risposta</div>
+    <h2 class="section-title" id="response-title">Veloci quando serve davvero.</h2>
+    <div class="response-grid">
+      <div class="response-stat">
+        <div class="response-num" aria-label="Pochi minuti">~3'</div>
+        <div class="response-label">Tempo di risposta</div>
+        <div class="response-sub">Dal momento in cui chiami a quando ricevi conferma dell'intervento</div>
+      </div>
+      <div class="response-stat">
+        <div class="response-num">7gg</div>
+        <div class="response-label">Disponibilità</div>
+        <div class="response-sub">Lunedì–Domenica, 07:00–21:00. Festivi inclusi</div>
+      </div>
+      <div class="response-stat">
+        <div class="response-num">1</div>
+        <div class="response-label">Referente diretto</div>
+        <div class="response-sub">Nessun call center. Chi risponde è chi interviene</div>
+      </div>
+      <div class="response-stat">
+        <div class="response-num">500+</div>
+        <div class="response-label">Emergenze risolte</div>
+        <div class="response-sub">Con valutazione media 4.9★ su 127 recensioni</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT TO DO -->
+  <section style="background: var(--white); padding: 88px 5vw;" aria-labelledby="cosa-fare-title">
+    <div class="split">
+      <div class="split-text">
+        <div class="section-label" aria-hidden="true">Cosa fare</div>
+        <h2 class="section-title" id="cosa-fare-title">Mentre aspetti il nostro arrivo.</h2>
+        <p><strong>In caso di guasto elettrico:</strong> non toccare fili scoperti o apparecchi che hanno dato problemi. Se il differenziale scatta continuamente, non forzarlo. Stacca gli elettrodomestici non essenziali e lascia accesi solo i circuiti sicuri.</p>
+        <p><strong>In caso di perdita d'acqua:</strong> chiudi subito il rubinetto di arresto generale (di solito sotto il lavandino o in cantina/garage). Asciuga l'acqua in eccesso per evitare danni al parquet o ai soffitti del piano inferiore.</p>
+        <a href="tel:+39XXXXXXXXXX" class="btn-urgent" style="display:inline-flex; animation: none;">
+          <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.1 12 19.79 19.79 0 011.07 3.37a2 2 0 011.99-2.18H6a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16z"/></svg>
+          Poi chiama subito
+        </a>
+      </div>
+      <div class="split-img">
+        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=700&q=80&auto=format&fit=crop" alt="Tecnico professionista in intervento di emergenza" loading="lazy" width="700" height="525" />
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing-strip" aria-labelledby="prezzi-title">
+    <div class="section-label" aria-hidden="true">Tariffe</div>
+    <h2 class="section-title" id="prezzi-title">Prezzi chiari anche in emergenza.</h2>
+    <p style="color:var(--mid-gray);font-size:0.91rem;margin-top:-36px;margin-bottom:40px;max-width:520px;">Tariffe fisse. Prima di iniziare sai esattamente quanto costa. IVA esclusa.</p>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-type">Feriale Diurno</div>
+        <div class="price-label">Intervento Standard</div>
+        <div class="price-time">Lun–Sab · 08:00–20:00</div>
+        <div class="price-amount"><sup>€</sup>89</div>
+        <div class="price-note">+ IVA · 1ª ora inclusa</div>
+        <a href="tel:+39XXXXXXXXXX" class="price-cta">Chiama ora →</a>
+      </div>
+      <div class="price-card featured">
+        <div class="price-badge">📅 Weekend</div>
+        <div class="price-type">Festivo Diurno</div>
+        <div class="price-label">Intervento Domenica</div>
+        <div class="price-time">Dom &amp; Festivi · 08:00–20:00</div>
+        <div class="price-amount"><sup>€</sup>119</div>
+        <div class="price-note">+ IVA · 1ª ora inclusa</div>
+        <a href="tel:+39XXXXXXXXXX" class="price-cta">Chiama ora →</a>
+      </div>
+      <div class="price-card">
+        <div class="price-type">Feriale Notturno</div>
+        <div class="price-label">Emergenza Notte</div>
+        <div class="price-time">Lun–Sab · 20:00–08:00</div>
+        <div class="price-amount"><sup>€</sup>149</div>
+        <div class="price-note">+ IVA · 1ª ora inclusa</div>
+        <a href="tel:+39XXXXXXXXXX" class="price-cta">Chiama ora →</a>
+      </div>
+      <div class="price-card">
+        <div class="price-type">Festivo Notturno</div>
+        <div class="price-label">Emergenza Festiva</div>
+        <div class="price-time">Dom &amp; Festivi · 20:00–08:00</div>
+        <div class="price-amount"><sup>€</sup>189</div>
+        <div class="price-note">+ IVA · 1ª ora inclusa</div>
+        <a href="tel:+39XXXXXXXXXX" class="price-cta">Chiama ora →</a>
+      </div>
+    </div>
+    <p class="pricing-note">* Tariffe inclusive di chiamata e prima ora. Preventivo comunicato prima di iniziare. Nessuna sorpresa.</p>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band" aria-labelledby="cta-title">
+    <h2 id="cta-title">Hai un'emergenza adesso?</h2>
+    <p>Non perdere tempo. Una chiamata e siamo in arrivo.</p>
+    <div class="cta-actions">
+      <a href="tel:+39XXXXXXXXXX" class="btn-white">
+        <svg width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.1 12 19.79 19.79 0 011.07 3.37a2 2 0 011.99-2.18H6a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16z"/></svg>
+        📞 +39 XXX XXX XXXX
+      </a>
+      <a href="/#contatti" class="btn-outline-white">Scrivi un messaggio →</a>
+    </div>
+  </section>
+
+  <section class="other-services" aria-labelledby="altri-title">
+    <div class="section-label" aria-hidden="true">Altri servizi</div>
+    <h2 class="section-title" id="altri-title">Tutto in un unico numero.</h2>
+    <div class="services-nav">
+      <a href="/impianti-elettrici" class="service-nav-card">
+        <div class="service-nav-tag">Elettricità</div>
+        <h3>Impianti Elettrici</h3>
+        <p>Installazione, manutenzione e certificazione DM 37/2008 per impianti residenziali e commerciali.</p>
+        <div class="service-nav-arrow" aria-hidden="true">→</div>
+      </a>
+      <a href="/impianti-idraulici" class="service-nav-card">
+        <div class="service-nav-tag">Idraulica</div>
+        <h3>Impianti Idraulici</h3>
+        <p>Perdite, rubinetti, sanitari, scarichi. Intervento rapido su tutta la rete idrica.</p>
+        <div class="service-nav-arrow" aria-hidden="true">→</div>
+      </a>
+      <a href="/ristrutturazioni" class="service-nav-card">
+        <div class="service-nav-tag">Ristrutturazione</div>
+        <h3>Ristrutturazioni</h3>
+        <p>Impianto elettrico e idraulico chiavi in mano. Bagni, cucine, nuove costruzioni.</p>
+        <div class="service-nav-arrow" aria-hidden="true">→</div>
+      </a>
+    </div>
+  </section>
+
+  <footer role="contentinfo">
+    <p>© 2026 <strong>Vanguard Flow &amp; Spark</strong> · P.IVA XXXXXXXXXXX · <a href="mailto:info@nordtecnici.it">info@nordtecnici.it</a></p>
+    <p>Tutti i diritti riservati · <a href="#">Privacy Policy</a> · <a href="#">Cookie Policy</a> · Certificati DM 37/2008</p>
+  </footer>
+
+  <div class="sticky-bar" role="complementary" aria-label="Chiama per emergenza">
+    <div class="pulse" aria-hidden="true"></div>
+    <a href="tel:+39XXXXXXXXXX" aria-label="Chiama ora per emergenza">
+      <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.1 12 19.79 19.79 0 011.07 3.37a2 2 0 011.99-2.18H6a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16z"/></svg>
+      🚨 Emergenza — Chiama ora: +39 XXX XXX XXXX
+    </a>
+  </div>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    function closeMenu() {
+      hamburger.classList.remove('open'); mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false'); document.body.style.overflow = '';
+    }
+  </script>
+</body>
+</html>
