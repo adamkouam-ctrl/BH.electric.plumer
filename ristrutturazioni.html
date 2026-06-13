@@ -1,1 +1,528 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ristrutturazioni Nord Italia – Impianti Elettrici e Idraulici Chiavi in Mano | Vanguard Flow & Spark</title>
+  <meta name="description" content="Gestiamo la parte elettrica e idraulica della tua ristrutturazione dall'inizio alla fine. Bagni, cucine, nuove costruzioni. Certificati DM 37/2008. Preventivo gratuito su Milano, Torino, Bergamo e tutto il nord Italia." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://bh-electricbh-plumer.vercel.app/ristrutturazioni" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231A2744'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='serif' font-weight='bold' font-size='18' fill='%23C4603A'>V</text></svg>" />
 
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ristrutturazioni – Vanguard Flow & Spark" />
+  <meta property="og:description" content="Impianti elettrici e idraulici per ristrutturazioni chiavi in mano. Certificati DM 37/2008. Preventivo gratuito." />
+  <meta property="og:url" content="https://bh-electricbh-plumer.vercel.app/ristrutturazioni" />
+  <meta property="og:image" content="https://bh-electricbh-plumer.vercel.app/og-image.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Ristrutturazioni – Impianti Elettrici e Idraulici",
+    "serviceType": "Ristrutturazioni edili con impianti elettrici e idraulici",
+    "description": "Gestione completa degli impianti elettrici e idraulici per ristrutturazioni residenziali e commerciali. Bagni, cucine, nuove costruzioni chiavi in mano. Certificati DM 37/2008.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Vanguard Flow & Spark",
+      "url": "https://bh-electricbh-plumer.vercel.app",
+      "telephone": "+39-XXX-XXX-XXXX",
+      "email": "info@nordtecnici.it"
+    },
+    "areaServed": {"@type": "Country", "name": "Italy"},
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servizi di ristrutturazione",
+      "itemListElement": [
+        {"@type": "Offer", "name": "Ristrutturazione bagno completa", "priceCurrency": "EUR"},
+        {"@type": "Offer", "name": "Impianto elettrico completo per ristrutturazione", "priceCurrency": "EUR"},
+        {"@type": "Offer", "name": "Impianto idraulico e riscaldamento", "priceCurrency": "EUR"}
+      ]
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://bh-electricbh-plumer.vercel.app/"},
+      {"@type": "ListItem", "position": 2, "name": "Ristrutturazioni", "item": "https://bh-electricbh-plumer.vercel.app/ristrutturazioni"}
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=1600&q=80&auto=format&fit=crop" fetchpriority="high" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #1A2744; --navy-deep: #111B33; --terracotta: #C4603A;
+      --terra-light: #D97A55; --linen: #F7F4EE; --charcoal: #1C1C1C;
+      --mid-gray: #6B7280; --white: #FFFFFF; --border: #E2DDD6; --green: #2d6a3f;
+    }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { font-family: 'Inter', sans-serif; background: var(--linen); color: var(--charcoal); line-height: 1.6; overflow-x: hidden; }
+    img { display: block; max-width: 100%; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 99; background: rgba(17,27,51,0.97); backdrop-filter: blur(10px); padding: 0 5vw; height: 64px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .nav-logo { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.15rem; color: var(--white); letter-spacing: 0.02em; text-decoration: none; }
+    .nav-logo span { color: var(--terracotta); }
+    .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+    .nav-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { background: var(--terracotta) !important; color: #fff !important; padding: 9px 20px; border-radius: 6px; font-weight: 600 !important; }
+    .nav-back { color: rgba(255,255,255,0.5) !important; font-size: 0.82rem !important; display: flex; align-items: center; gap: 6px; }
+    .nav-hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 40px; height: 40px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-hamburger span { display: block; width: 24px; height: 2px; background: #fff; border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu { display: none; position: fixed; inset: 0; z-index: 105; background: var(--navy-deep); flex-direction: column; align-items: center; justify-content: center; gap: 36px; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { color: #fff; text-decoration: none; font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; }
+    .mobile-menu .mobile-cta { background: var(--terracotta); padding: 16px 40px; border-radius: 8px; font-size: 1.2rem !important; }
+    @media (max-width: 768px) { .nav-links { display: none; } .nav-hamburger { display: flex; } }
+
+    /* HERO */
+    .hero { min-height: 80vh; position: relative; display: flex; flex-direction: column; justify-content: flex-end; padding: 120px 5vw 72px; }
+    .hero-bg { position: absolute; inset: 0; z-index: 0; }
+    .hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+    .hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(17,27,51,0.96) 0%, rgba(17,27,51,0.70) 45%, rgba(17,27,51,0.30) 100%); }
+    .hero-content { position: relative; z-index: 1; max-width: 720px; }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; margin-bottom: 20px; font-size: 0.78rem; color: rgba(255,255,255,0.45); }
+    .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+    .breadcrumb a:hover { color: rgba(255,255,255,0.8); }
+    .breadcrumb-current { color: var(--terracotta); font-weight: 600; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--terracotta); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 16px; }
+    .hero-eyebrow::before { content: ''; width: 28px; height: 2px; background: var(--terracotta); }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 5.5vw, 4.4rem); font-weight: 900; color: var(--white); line-height: 1.08; margin-bottom: 20px; }
+    .hero h1 em { font-style: normal; color: var(--terracotta); }
+    .hero-sub { color: rgba(255,255,255,0.70); font-size: 1rem; max-width: 520px; margin-bottom: 36px; line-height: 1.75; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 44px; }
+    .btn-primary { background: var(--terracotta); color: #fff; padding: 15px 30px; border-radius: 6px; font-size: 0.97rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: background 0.2s, transform 0.15s; }
+    .btn-primary:hover { background: var(--terra-light); transform: translateY(-2px); }
+    .btn-ghost { color: rgba(255,255,255,0.75); font-size: 0.92rem; text-decoration: none; display: inline-flex; align-items: center; gap: 7px; border: 1px solid rgba(255,255,255,0.2); padding: 14px 26px; border-radius: 6px; transition: color 0.2s, border-color 0.2s; }
+    .btn-ghost:hover { color: #fff; border-color: rgba(255,255,255,0.5); }
+    .hero-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .pill { display: flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.13); padding: 7px 14px; border-radius: 100px; color: rgba(255,255,255,0.80); font-size: 0.78rem; font-weight: 500; backdrop-filter: blur(4px); }
+    .pill svg { color: var(--terracotta); flex-shrink: 0; }
+
+    /* CERT STRIP */
+    .cert-strip { background: var(--white); border-bottom: 1px solid var(--border); padding: 20px 5vw; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px 36px; align-items: center; }
+    .cert-item { display: flex; align-items: center; gap: 9px; font-size: 0.82rem; font-weight: 600; color: var(--navy); }
+    .cert-badge { background: var(--navy); color: #fff; padding: 4px 10px; border-radius: 4px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; white-space: nowrap; }
+    .cert-badge.orange { background: var(--terracotta); }
+    .cert-badge.green { background: var(--green); }
+
+    /* SECTIONS */
+    .section { padding: 88px 5vw; }
+    .section-label { color: var(--terracotta); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+    .section-label::before { content: ''; width: 22px; height: 2px; background: var(--terracotta); }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.5vw, 2.7rem); font-weight: 700; color: var(--navy); line-height: 1.15; max-width: 580px; margin-bottom: 48px; }
+
+    /* SERVICES GRID */
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .service-card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 32px 28px; transition: box-shadow 0.2s, transform 0.2s; }
+    .service-card:hover { box-shadow: 0 12px 40px rgba(26,39,68,0.10); transform: translateY(-4px); }
+    .service-icon { width: 48px; height: 48px; background: rgba(196,96,58,0.08); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; color: var(--terracotta); }
+    .service-card h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+    .service-card p { color: var(--mid-gray); font-size: 0.87rem; line-height: 1.7; margin-bottom: 16px; }
+    .service-list { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+    .service-list li { font-size: 0.84rem; color: var(--charcoal); display: flex; align-items: flex-start; gap: 8px; }
+    .service-list li::before { content: '✓'; color: var(--terracotta); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+    /* SPLIT */
+    .split { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .split-img { border-radius: 16px; overflow: hidden; aspect-ratio: 4/3; }
+    .split-img img { width: 100%; height: 100%; object-fit: cover; }
+    .split-text .section-title { margin-bottom: 24px; }
+    .split-text p { color: var(--mid-gray); font-size: 0.93rem; line-height: 1.8; margin-bottom: 16px; }
+    .split-text p:last-of-type { margin-bottom: 32px; }
+    @media (max-width: 860px) { .split { grid-template-columns: 1fr; } .split-img { aspect-ratio: 16/9; } }
+
+    /* PROCESS DARK */
+    .process-dark { background: var(--navy-deep); padding: 88px 5vw; }
+    .process-dark .section-label { color: rgba(255,255,255,0.4); }
+    .process-dark .section-label::before { background: rgba(255,255,255,0.2); }
+    .process-dark .section-title { color: var(--white); }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; }
+    .step-num { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 900; color: rgba(196,96,58,0.25); line-height: 1; margin-bottom: 8px; }
+    .step h4 { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--white); margin-bottom: 8px; }
+    .step p { color: rgba(255,255,255,0.48); font-size: 0.86rem; line-height: 1.65; }
+
+    /* DETRAZIONI BAND */
+    .detrazioni-band { background: var(--green); padding: 48px 5vw; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 16px 48px; text-align: center; }
+    .detrazione-item { color: #fff; }
+    .detrazione-num { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 900; line-height: 1; }
+    .detrazione-label { font-size: 0.84rem; opacity: 0.85; margin-top: 4px; }
+    .detrazioni-band .sep { width: 1px; height: 60px; background: rgba(255,255,255,0.2); }
+    @media (max-width: 640px) { .detrazioni-band .sep { display: none; } }
+
+    /* FAQ */
+    .faq-list { max-width: 700px; display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+    .faq-item { background: var(--white); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+    .faq-q { width: 100%; background: none; border: none; padding: 18px 22px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; text-align: left; gap: 16px; }
+    .faq-q span:first-child { font-family: 'Playfair Display', serif; font-size: 0.96rem; font-weight: 700; color: var(--navy); }
+    .faq-icon { color: var(--terracotta); font-size: 1.3rem; font-weight: 300; transition: transform 0.25s; flex-shrink: 0; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; padding: 0 22px; color: var(--mid-gray); font-size: 0.89rem; line-height: 1.75; }
+    .faq-item.open .faq-a { max-height: 300px; padding: 0 22px 18px; }
+
+    /* CTA BAND */
+    .cta-band { background: var(--terracotta); padding: 72px 5vw; text-align: center; }
+    .cta-band h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 900; color: var(--white); margin-bottom: 14px; }
+    .cta-band p { color: rgba(255,255,255,0.80); font-size: 0.97rem; margin-bottom: 36px; }
+    .cta-actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+    .btn-white { background: var(--white); color: var(--terracotta); padding: 15px 30px; border-radius: 6px; font-size: 0.97rem; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: transform 0.15s; }
+    .btn-white:hover { transform: translateY(-2px); }
+    .btn-outline-white { border: 2px solid rgba(255,255,255,0.6); color: var(--white); padding: 14px 28px; border-radius: 6px; font-size: 0.97rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: border-color 0.2s; }
+    .btn-outline-white:hover { border-color: var(--white); }
+
+    /* OTHER SERVICES */
+    .other-services { padding: 88px 5vw; background: var(--linen); }
+    .services-nav { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 8px; }
+    .service-nav-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; display: flex; flex-direction: column; gap: 8px; transition: box-shadow 0.2s, transform 0.2s; }
+    .service-nav-card:hover { box-shadow: 0 8px 28px rgba(26,39,68,0.09); transform: translateY(-3px); }
+    .service-nav-tag { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--terracotta); }
+    .service-nav-card h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--navy); font-weight: 700; }
+    .service-nav-card p { font-size: 0.84rem; color: var(--mid-gray); line-height: 1.6; }
+    .service-nav-arrow { color: var(--terracotta); font-size: 1.1rem; margin-top: auto; }
+
+    /* STICKY BAR */
+    .sticky-bar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; background: var(--navy-deep); border-top: 2px solid var(--terracotta); padding: 14px 20px; display: flex; align-items: center; justify-content: center; gap: 12px; }
+    .sticky-bar a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1rem; display: flex; align-items: center; gap: 10px; }
+    .pulse { width: 9px; height: 9px; background: #4ade80; border-radius: 50%; animation: pulse 1.8s ease-in-out infinite; flex-shrink: 0; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.5)} }
+
+    /* FOOTER */
+    footer { background: #111; color: rgba(255,255,255,0.38); text-align: center; padding: 28px 5vw 80px; font-size: 0.8rem; line-height: 1.9; }
+    footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
+    footer a:hover { color: var(--terra-light); }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav aria-label="Navigazione principale">
+    <a href="/" class="nav-logo">Vanguard<span> Flow &amp; Spark</span></a>
+    <ul class="nav-links" role="list">
+      <li><a href="/" class="nav-back">← Home</a></li>
+      <li><a href="/impianti-elettrici">Elettricità</a></li>
+      <li><a href="/impianti-idraulici">Idraulica</a></li>
+      <li><a href="/interventi-urgenti">Emergenze</a></li>
+      <li><a href="/#contatti" class="nav-cta">Preventivo Gratuito</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Apri menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menu">
+    <a href="/" onclick="closeMenu()">Home</a>
+    <a href="/impianti-elettrici" onclick="closeMenu()">Elettricità</a>
+    <a href="/impianti-idraulici" onclick="closeMenu()">Idraulica</a>
+    <a href="/interventi-urgenti" onclick="closeMenu()">Emergenze</a>
+    <a href="/#contatti" class="mobile-cta" onclick="closeMenu()">Preventivo Gratuito</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Ristrutturazioni Nord Italia">
+    <div class="hero-bg" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=1600&q=80&auto=format&fit=crop" alt="Ristrutturazione bagno con nuovi impianti idraulici ed elettrici" loading="eager" fetchpriority="high" width="1600" height="900" sizes="100vw" />
+    </div>
+    <div class="hero-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span aria-hidden="true"> › </span><span class="breadcrumb-current">Ristrutturazioni</span>
+      </nav>
+      <div class="hero-eyebrow">Ristrutturazioni</div>
+      <h1>Impianti per<br /><em>ristrutturazioni chiavi in mano.</em></h1>
+      <p class="hero-sub">Gestiamo la parte elettrica e idraulica della tua ristrutturazione dall'inizio alla fine, in coordinazione con la tua impresa edile. Bagni, cucine, nuove costruzioni.</p>
+      <div class="hero-actions">
+        <a href="tel:+39XXXXXXXXXX" class="btn-primary" aria-label="Chiama ora">
+          <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.1 12 19.79 19.79 0 011.07 3.37a2 2 0 011.99-2.18H6a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16z"/></svg>
+          Chiama ora
+        </a>
+        <a href="/#contatti" class="btn-ghost">Richiedi preventivo scritto →</a>
+      </div>
+      <div class="hero-pills" role="list">
+        <div class="pill" role="listitem">🏗️ Chiavi in mano</div>
+        <div class="pill" role="listitem"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622C17.176 19.29 21 14.591 21 9c0-1.08-.128-2.116-.382-3.016z"/></svg> Cert. DM 37/2008</div>
+        <div class="pill" role="listitem">🧾 Detrazioni 50–65%</div>
+        <div class="pill" role="listitem">🛡️ Garanzia 2 anni</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERT STRIP -->
+  <div class="cert-strip" role="complementary">
+    <div class="cert-item"><span class="cert-badge">DM 37/2008</span> Impianti a norma di legge</div>
+    <div class="cert-item"><span class="cert-badge orange">DICO</span> Dichiarazione di conformità</div>
+    <div class="cert-item"><span class="cert-badge green">ISO 9001</span> Qualità certificata</div>
+    <div class="cert-item">🛡️ <strong>Garanzia 2 anni</strong> manodopera</div>
+    <div class="cert-item">🧾 <strong>Fattura con IVA</strong> — detrazioni 50–65%</div>
+  </div>
+
+  <!-- WHAT WE DO -->
+  <section class="section" id="servizi" aria-labelledby="servizi-title">
+    <div class="section-label" aria-hidden="true">Cosa facciamo</div>
+    <h2 class="section-title" id="servizi-title">Tutto ciò che riguarda gli impianti nella tua ristrutturazione.</h2>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>Ristrutturazione Bagno</h3>
+        <p>Gestiamo l'impianto idraulico ed elettrico del bagno dall'inizio alla fine: scarichi, adduzione, punti luce, prese e riscaldamento. In coordinazione con il tuo piastrellista.</p>
+        <ul class="service-list">
+          <li>Nuovo impianto idraulico completo</li>
+          <li>Punti luce, specchio illuminato e prese</li>
+          <li>Scarichi WC, doccia, vasca e lavabo</li>
+          <li>Predisposizione per riscaldamento a pavimento</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2M12 12v3M8 12v3M16 12v3"/></svg>
+        </div>
+        <h3>Ristrutturazione Cucina</h3>
+        <p>Nuovo posizionamento dell'impianto idraulico per lavello e lavastoviglie, nuove prese dedicate per elettrodomestici, cappa e punto gas. Tutto a norma.</p>
+        <ul class="service-list">
+          <li>Adduzione e scarico lavello</li>
+          <li>Prese dedicate per elettrodomestici</li>
+          <li>Predisposizione lavastoviglie e forno</li>
+          <li>Cappa e punto luce isola cucina</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M8 3v18M12 9h4M12 13h4"/></svg>
+        </div>
+        <h3>Impianto Elettrico Completo</h3>
+        <p>Rifacimento totale dell'impianto elettrico per ristrutturazioni. Nuovo quadro, cablaggio sotto traccia, nuovi punti luce e prese, DICO a fine lavori.</p>
+        <ul class="service-list">
+          <li>Nuovo quadro elettrico con differenziali</li>
+          <li>Posa cavi e tracce</li>
+          <li>Punti luce, prese e interruttori</li>
+          <li>Certificazione DICO a fine lavori</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+        </div>
+        <h3>Impianto Idraulico e Riscaldamento</h3>
+        <p>Posa di nuove tubazioni per acqua calda e fredda, riscaldamento a pavimento o con radiatori. Collaudo e certificazione dell'impianto completato.</p>
+        <ul class="service-list">
+          <li>Tubazioni in multistrato o rame</li>
+          <li>Riscaldamento a pavimento radiante</li>
+          <li>Sostituzione caldaia a condensazione</li>
+          <li>Collaudo pressione e documentazione</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+        </div>
+        <h3>Nuove Costruzioni</h3>
+        <p>Progettazione e realizzazione degli impianti elettrici e idraulici per nuove costruzioni residenziali e commerciali, dalla prima fase alla consegna finale.</p>
+        <ul class="service-list">
+          <li>Progetto impianti su planimetria</li>
+          <li>Posa in opera durante la costruzione</li>
+          <li>Collaudo e DICO finale</li>
+          <li>Assistenza post-consegna</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        </div>
+        <h3>Domotica e Risparmio Energetico</h3>
+        <p>Predisposizione impianti per sistemi domotici, illuminazione LED su misura, fotovoltaico e accumulo. Ottimizzazione energetica con accesso alle detrazioni al 65%.</p>
+        <ul class="service-list">
+          <li>Predisposizione per domotica</li>
+          <li>Illuminazione LED integrata</li>
+          <li>Impianti fotovoltaici e storage</li>
+          <li>Detrazione energetica al 65%</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DETRAZIONI BAND -->
+  <div class="detrazioni-band" role="complementary" aria-label="Detrazioni fiscali disponibili">
+    <div class="detrazione-item">
+      <div class="detrazione-num">50%</div>
+      <div class="detrazione-label">Detrazione IRPEF<br>ristrutturazione edilizia</div>
+    </div>
+    <div class="sep" aria-hidden="true"></div>
+    <div class="detrazione-item">
+      <div class="detrazione-num">65%</div>
+      <div class="detrazione-label">Detrazione IRPEF<br>risparmio energetico</div>
+    </div>
+    <div class="sep" aria-hidden="true"></div>
+    <div class="detrazione-item" style="max-width:320px;">
+      <div class="detrazione-label" style="font-size:0.93rem; opacity:1;">Forniamo tutta la documentazione necessaria — DICO, fattura con IVA e relazione tecnica — per accedere alle detrazioni fiscali.</div>
+    </div>
+  </div>
+
+  <!-- SPLIT: WHY -->
+  <section style="background: var(--white); padding: 88px 5vw;" aria-labelledby="why-title">
+    <div class="split">
+      <div class="split-img">
+        <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=700&q=80&auto=format&fit=crop" alt="Bagno ristrutturato con impianti a norma" loading="lazy" width="700" height="525" />
+      </div>
+      <div class="split-text">
+        <div class="section-label" aria-hidden="true">Perché sceglierci</div>
+        <h2 class="section-title" id="why-title">Un unico referente per tutta la parte impiantistica.</h2>
+        <p>Coordinarsi con più artigiani durante una ristrutturazione è la fonte principale di ritardi e costi extra. Noi gestiamo sia la parte elettrica che quella idraulica, interfacciandoci direttamente con la tua impresa edile per garantire tempi e sequenze corrette.</p>
+        <p>Al termine dei lavori rilasciamo la <strong>Dichiarazione di Conformità (DICO)</strong> per entrambi gli impianti — documento obbligatorio per legge e indispensabile per accedere alle detrazioni fiscali del 50% o 65%.</p>
+        <a href="/#contatti" class="btn-primary" style="display:inline-flex;">Richiedi preventivo gratuito →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process-dark" aria-labelledby="process-title">
+    <div class="section-label" aria-hidden="true">Come lavoriamo</div>
+    <h2 class="section-title" id="process-title">Dalla planimetria alla DICO, senza intoppi.</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num" aria-hidden="true">01</div><h4>Sopralluogo e progetto</h4><p>Analizziamo la planimetria e lo stato dei locali. Ti consegniamo un preventivo dettagliato con tutte le voci di costo.</p></div>
+      <div class="step"><div class="step-num" aria-hidden="true">02</div><h4>Coordinamento cantiere</h4><p>Ci interfacciamo con la tua impresa edile per rispettare le sequenze corrette: prima le tracce, poi i massetti, poi i rivestimenti.</p></div>
+      <div class="step"><div class="step-num" aria-hidden="true">03</div><h4>Posa impianti</h4><p>Installiamo gli impianti elettrici e idraulici con materiali certificati. Lavoriamo in modo ordinato e rispettiamo i tempi concordati.</p></div>
+      <div class="step"><div class="step-num" aria-hidden="true">04</div><h4>Collaudo e DICO</h4><p>Collaudo finale di entrambi gli impianti, rilascio DICO e garanzia 2 anni sulla manodopera. Tutto pronto per la tua richiesta di detrazione.</p></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" aria-labelledby="faq-title" style="background: var(--linen);">
+    <div class="section-label" aria-hidden="true">Domande frequenti</div>
+    <h2 class="section-title" id="faq-title">Tutto quello che vuoi sapere sulle ristrutturazioni.</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-r1">
+          <span>Quanto tempo richiede la ristrutturazione di un bagno completo?</span><span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-r1" role="region">Per un bagno di medie dimensioni (4–6 mq), la parte impiantistica (idraulica + elettrica) richiede generalmente 3–5 giorni lavorativi. I tempi complessivi della ristrutturazione dipendono anche dal lavoro di piastrellatura e muratura dell'impresa edile. Forniamo un calendario dettagliato prima di iniziare.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-r2">
+          <span>Come funziona la detrazione del 50% per la ristrutturazione?</span><span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-r2" role="region">La detrazione IRPEF del 50% si applica agli interventi di ristrutturazione edilizia sulle abitazioni residenziali, compresi gli impianti elettrici e idraulici. La spesa massima detraibile è di 96.000€ per unità immobiliare, recuperabile in 10 anni. Forniamo fattura con IVA, DICO e tutta la documentazione necessaria per la pratica.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-r3">
+          <span>Lavorate con qualsiasi impresa edile o avete una vostra squadra?</span><span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-r3" role="region">Lavoriamo con qualsiasi impresa edile scelta dal cliente. Ci coordiniamo direttamente con il responsabile di cantiere per rispettare le sequenze degli interventi e garantire che le tracce siano pronte prima delle finiture. Su richiesta possiamo anche consigliare imprese con cui abbiamo già collaborato.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-r4">
+          <span>Cosa include esattamente il preventivo?</span><span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-r4" role="region">Il preventivo include una voce dettagliata per ogni lavorazione: manodopera, materiali, apertura e chiusura tracce, collaudo e DICO. Nessuna voce nascosta: il preventivo firmato è quello che paghi a fine lavori, salvo varianti richieste dal cliente durante il cantiere.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-r5">
+          <span>Fate anche solo la parte elettrica o solo quella idraulica?</span><span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-r5" role="region">Sì, operiamo anche su un solo impianto se il cliente ha già un referente per l'altro. La gestione congiunta di entrambi gli impianti è un vantaggio organizzativo, ma non è obbligatoria. Il preventivo è sempre personalizzato in base all'ambito di lavoro richiesto.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band" aria-labelledby="cta-title">
+    <h2 id="cta-title">Stai pianificando una ristrutturazione?</h2>
+    <p>Chiamaci o inviaci la planimetria. Preventivo gratuito, risposta in poche ore.</p>
+    <div class="cta-actions">
+      <a href="tel:+39XXXXXXXXXX" class="btn-white">
+        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.1 12 19.79 19.79 0 011.07 3.37a2 2 0 011.99-2.18H6a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16z"/></svg>
+        Chiama ora
+      </a>
+      <a href="/#contatti" class="btn-outline-white">Richiedi preventivo scritto →</a>
+    </div>
+  </section>
+
+  <!-- OTHER SERVICES -->
+  <section class="other-services" aria-labelledby="altri-title">
+    <div class="section-label" aria-hidden="true">Altri servizi</div>
+    <h2 class="section-title" id="altri-title">Tutto in un unico numero.</h2>
+    <div class="services-nav">
+      <a href="/impianti-elettrici" class="service-nav-card">
+        <div class="service-nav-tag">Elettricità</div>
+        <h3>Impianti Elettrici</h3>
+        <p>Quadri elettrici, cablaggio, messa a terra. Certificati DM 37/2008 con DICO.</p>
+        <div class="service-nav-arrow" aria-hidden="true">→</div>
+      </a>
+      <a href="/impianti-idraulici" class="service-nav-card">
+        <div class="service-nav-tag">Idraulica</div>
+        <h3>Impianti Idraulici</h3>
+        <p>Perdite, rubinetti, sanitari, scarichi. Intervento rapido su tutta la rete idrica.</p>
+        <div class="service-nav-arrow" aria-hidden="true">→</div>
+      </a>
+      <a href="/interventi-urgenti" class="service-nav-card">
+        <div class="service-nav-tag">Emergenza</div>
+        <h3>Interventi Urgenti</h3>
+        <p>Guasti improvvisi, blackout, perdite. Disponibili 7 giorni su 7.</p>
+        <div class="service-nav-arrow" aria-hidden="true">→</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <p>© 2026 <strong>Vanguard Flow &amp; Spark</strong> · P.IVA XXXXXXXXXXX · <a href="mailto:info@nordtecnici.it">info@nordtecnici.it</a></p>
+    <p>Tutti i diritti riservati · <a href="#">Privacy Policy</a> · <a href="#">Cookie Policy</a> · Certificati DM 37/2008</p>
+  </footer>
+
+  <!-- STICKY BAR -->
+  <div class="sticky-bar" role="complementary" aria-label="Chiama ora">
+    <div class="pulse" aria-hidden="true"></div>
+    <a href="tel:+39XXXXXXXXXX" aria-label="Chiama ora">
+      <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.1 12 19.79 19.79 0 011.07 3.37a2 2 0 011.99-2.18H6a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16z"/></svg>
+      Chiama ora — +39 XXX XXX XXXX
+    </a>
+  </div>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    function closeMenu() {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
+    }
+  </script>
+</body>
+</html>
