@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Richiesta inviata – Vanguard Flow & Spark</title>
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- ═══ GTM HEAD — replace GTM-XXXXXXX with your real ID ═══ -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231A2744'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='serif' font-weight='bold' font-size='18' fill='%23C4603A'>V</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:       #1A2744;
+      --navy-deep:  #111B33;
+      --terracotta: #C4603A;
+      --terra-light:#D97A55;
+      --linen:      #F7F4EE;
+      --charcoal:   #1C1C1C;
+      --mid-gray:   #6B7280;
+      --white:      #FFFFFF;
+      --border:     #E2DDD6;
+      --green:      #2d6a3f;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--linen);
+      color: var(--charcoal);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* NAV */
+    nav {
+      background: var(--navy-deep);
+      padding: 0 5vw;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--white);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--terracotta); }
+
+    /* MAIN */
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 5vw 100px;
+    }
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 56px 48px;
+      max-width: 560px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(26,39,68,0.08);
+    }
+    .check-circle {
+      width: 72px;
+      height: 72px;
+      background: rgba(45,106,63,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 28px;
+    }
+    .check-circle svg { color: var(--green); }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      font-weight: 900;
+      color: var(--navy);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .subtitle {
+      color: var(--mid-gray);
+      font-size: 0.97rem;
+      line-height: 1.75;
+      margin-bottom: 36px;
+    }
+    .what-next {
+      background: var(--linen);
+      border-radius: 12px;
+      padding: 24px 28px;
+      text-align: left;
+      margin-bottom: 36px;
+    }
+    .what-next-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--terracotta);
+      margin-bottom: 14px;
+    }
+    .next-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .next-item:last-child { margin-bottom: 0; }
+    .next-num {
+      width: 24px;
+      height: 24px;
+      background: var(--navy);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 0.72rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .next-text {
+      font-size: 0.88rem;
+      color: var(--charcoal);
+      line-height: 1.6;
+    }
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .btn-primary {
+      background: var(--terracotta);
+      color: #fff;
+      padding: 15px 24px;
+      border-radius: 7px;
+      font-size: 0.97rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover { background: var(--terra-light); }
+    .btn-ghost {
+      color: var(--navy);
+      font-size: 0.9rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-weight: 500;
+      opacity: 0.65;
+      transition: opacity 0.2s;
+    }
+    .btn-ghost:hover { opacity: 1; }
+
+    /* STICKY BAR */
+    .sticky-bar {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 100;
+      background: var(--navy-deep);
+      border-top: 2px solid var(--terracotta);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+    .sticky-bar a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .pulse {
+      width: 9px; height: 9px;
+      background: #4ade80;
+      border-radius: 50%;
+      animation: pulse 1.8s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+    @keyframes pulse {
+      0%,100%{opacity:1;transform:scale(1)}
+      50%{opacity:0.5;transform:scale(1.5)}
+    }
+
+    @media (max-width: 540px) {
+      .card { padding: 36px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- GTM noscript — replace GTM-XXXXXXX -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <nav>
+    <a href="/" class="nav-logo">Vanguard<span> Flow &amp; Spark</span></a>
+  </nav>
+
+  <main>
+    <div class="card">
+
+      <div class="check-circle" aria-hidden="true">
+        <svg width="34" height="34" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path d="M20 6L9 17l-5-5"/>
+        </svg>
+      </div>
+
+      <h1>Richiesta inviata<br />con successo.</h1>
+      <p class="subtitle">Grazie per averci contattato. Ti risponderemo entro poche ore per concordare un sopralluogo gratuito.</p>
+
+      <div class="what-next">
+        <div class="what-next-title">Cosa succede ora</div>
+        <div class="next-item">
+          <div class="next-num">1</div>
+          <div class="next-text">Ricevi una conferma via email con il riepilogo della tua richiesta.</div>
+        </div>
+        <div class="next-item">
+          <div class="next-num">2</div>
+          <div class="next-text">Ti contatteremo telefonicamente entro poche ore per capire meglio il problema.</div>
+        </div>
+        <div class="next-item">
+          <div class="next-num">3</div>
+          <div class="next-text">Concordiamo data e orario per il sopralluogo gratuito e senza impegno.</div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a href="tel:+39XXXXXXXXXX" class="btn-primary">
+          <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.1 12 19.79 19.79 0 011.07 3.37a2 2 0 011.99-2.18H6a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16z"/></svg>
+          Preferisci chiamarci ora?
+        </a>
+        <a href="/" class="btn-ghost">← Torna alla home</a>
+      </div>
+
+    </div>
+  </main>
+
+  <div class="sticky-bar" role="complementary" aria-label="Chiama ora">
+    <div class="pulse" aria-hidden="true"></div>
+    <a href="tel:+39XXXXXXXXXX">
+      <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.1 12 19.79 19.79 0 011.07 3.37a2 2 0 011.99-2.18H6a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16z"/></svg>
+      Chiama ora — +39 XXX XXX XXXX
+    </a>
+  </div>
+
+</body>
+</html>
