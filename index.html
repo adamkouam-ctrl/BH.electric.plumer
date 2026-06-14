@@ -1044,16 +1044,15 @@
   // Elements you want to inject location into
   // Add data-location="true" to any HTML element you want updated
   function injectCity(city) {
-    if (!city) return;
+  if (!city) return;
 
-    // Replace placeholder text in marked elements
-    document.querySelectorAll('[data-location]').forEach(el => {
-      el.textContent = el.textContent.replace('{città}', city);
-    });
+  document.querySelectorAll('[data-location]').forEach(el => {
+    // Replace "Nord Italia" with detected city
+    el.innerHTML = el.innerHTML.replace(/Nord Italia/g, city);
+  });
 
-    // Update page title too
-    document.title = document.title.replace('Nord Italia', city);
-  }
+  document.title = document.title.replace('Nord Italia', city);
+}
 
   // Try geolocation API first (most accurate, needs user permission)
   function tryGeolocation() {
