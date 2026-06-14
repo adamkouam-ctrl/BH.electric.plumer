@@ -983,15 +983,14 @@
 
       try {
         /* ── REPLACE THIS URL with your real endpoint ── */
-        const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+        const res = await fetch('https://formsubmit.co/ajax/adamkouam@gmail.com', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
           body: JSON.stringify({ nome, tel, servizio, messaggio: msg })
         });
 
         if (res.ok) {
-          btn.textContent = '✓ Richiesta inviata! Ti contatteremo presto.';
-          btn.style.background = '#2d6a3f';
+          window.location.href = '/grazie.html';
         } else {
           throw new Error('Server error');
         }
