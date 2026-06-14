@@ -1028,6 +1028,87 @@
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(adjustHeroPadding, 150);
     });
+
+    /* ── Dynamic Location Insertion ── */
+(function() {
+  const CITIES = {
+    // Province codes → city names
+    'MI': 'Milano', 'TO': 'Torino', 'BG': 'Bergamo',
+    'BS': 'Brescia', 'VR': 'Verona', 'VI': 'Vicenza',
+    'PD': 'Padova', 'VE': 'Venezia', 'BO': 'Bologna',
+    'MO': 'Modena', 'PR': 'Parma', 'GE': 'Genova',
+    'CO': 'Como', 'MB': 'Monza', 'VA': 'Varese',
+    'NO': 'Novara', 'TV': 'Treviso', 'UD': 'Udine'
+  };
+
+  // Elements you want to inject location into
+  // Add data-location="true" to any HTML element you want updated
+  function injectCity(city) {
+    if (!city) return;
+
+    // Replace placeholder text in marked elements
+    document.querySelectorAll('[data-location]').forEach(el => {
+      el.textContent = el.textContent.replace('{città}', city);
+    });
+
+    // Update page title too
+    document.title = document.title.replace('Nord Italia', city);
+  }
+
+  // Try geolocation API first (most accurate, needs user permission)
+  function tryGeolocation() {
+    if (!navigator.geolocation) {
+      tryIPLookup();
+      return;
+    }
+    navigator.geolocation.getCurrentPosition(
+      function(pos) {
+        // Use reverse geocoding via free API
+        const lat = pos.coords.latitude;
+        const lon = pos.coords.longitude;
+        fetch(`https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lon}&format=json`)
+          .then(r => r.json())
+          .then(data => {
+            const city = data.address.city || data.address.town || data.address.village;
+            if (city) injectCity(city);
+            else tryIPLookup();
+          })
+          .catch(tryIPLookup);
+      },
+      tryIPLookup, // if user denies permission, fall back to IP
+      { timeout: 3000 }
+    );
+  }
+
+  // IP-based fallback (no permission needed, less accurate)
+  function tryIPLookup() {
+    fetch('https://ipapi.co/json/')
+      .then(r => r.json())
+      .then(data => {
+        // Check if city is in our service area
+        const city = data.city;
+        const region = data.region;
+        const isNordItalia = [
+          'Lombardia','Piemonte','Veneto','Emilia-Romagna',
+          'Liguria','Friuli-Venezia Giulia','Trentino-Alto Adige'
+        ].includes(region);
+
+        if (city && isNordItalia) {
+          injectCity(city);
+        }
+        // If outside service area, leave default text unchanged
+      })
+      .catch(() => {}); // fail silently, default text stays
+  }
+
+  // Run after DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', tryGeolocation);
+  } else {
+    tryGeolocation();
+  }
+})();
+    
   </script>
 
 </body>
