@@ -1,2 +1,118 @@
-<!-- 404.html — minimal version -->
-<!-- Same nav + a centered card saying page not found + call button -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pagina non trovata – Vanguard Flow & Spark</title>
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- GTM — replace GTM-XXXXXXX -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K65VXQ5V');</script>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231A2744'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='serif' font-weight='bold' font-size='18' fill='%23C4603A'>V</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #1A2744; --navy-deep: #111B33; --terracotta: #C4603A;
+      --terra-light: #D97A55; --linen: #F7F4EE; --charcoal: #1C1C1C;
+      --mid-gray: #6B7280; --white: #FFFFFF; --border: #E2DDD6;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--linen); color: var(--charcoal); min-height: 100vh; display: flex; flex-direction: column; }
+    nav { background: var(--navy-deep); padding: 0 5vw; height: 64px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .nav-logo { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.15rem; color: var(--white); text-decoration: none; }
+    .nav-logo span { color: var(--terracotta); }
+    .nav-phone { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.88rem; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+    .nav-phone:hover { color: var(--white); }
+
+    main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 60px 5vw 100px; }
+    .card { background: var(--white); border: 1px solid var(--border); border-radius: 20px; padding: 56px 48px; max-width: 580px; width: 100%; text-align: center; box-shadow: 0 20px 60px rgba(26,39,68,0.08); }
+
+    .error-num { font-family: 'Playfair Display', serif; font-size: 7rem; font-weight: 900; color: var(--terracotta); line-height: 1; margin-bottom: 8px; opacity: 0.15; }
+    .icon-wrap { width: 72px; height: 72px; background: rgba(196,96,58,0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: -40px auto 24px; position: relative; z-index: 1; }
+    .icon-wrap svg { color: var(--terracotta); }
+    h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: 900; color: var(--navy); margin-bottom: 14px; }
+    .subtitle { color: var(--mid-gray); font-size: 0.95rem; line-height: 1.75; margin-bottom: 36px; }
+
+    .quick-links { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 32px; text-align: left; }
+    .quick-link { background: var(--linen); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; text-decoration: none; display: flex; flex-direction: column; gap: 4px; transition: box-shadow 0.2s, transform 0.2s; }
+    .quick-link:hover { box-shadow: 0 6px 20px rgba(26,39,68,0.08); transform: translateY(-2px); }
+    .quick-link-tag { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--terracotta); }
+    .quick-link h3 { font-family: 'Playfair Display', serif; font-size: 0.97rem; color: var(--navy); font-weight: 700; }
+
+    .btn-primary { background: var(--terracotta); color: #fff; padding: 15px 24px; border-radius: 7px; font-size: 0.97rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 10px; transition: background 0.2s; width: 100%; margin-bottom: 12px; }
+    .btn-primary:hover { background: var(--terra-light); }
+    .btn-ghost { color: var(--navy); font-size: 0.88rem; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 6px; font-weight: 500; opacity: 0.6; transition: opacity 0.2s; }
+    .btn-ghost:hover { opacity: 1; }
+
+    .sticky-bar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; background: var(--navy-deep); border-top: 2px solid var(--terracotta); padding: 14px 20px; display: flex; align-items: center; justify-content: center; gap: 12px; }
+    .sticky-bar a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1rem; display: flex; align-items: center; gap: 10px; }
+    .pulse { width: 9px; height: 9px; background: #4ade80; border-radius: 50%; animation: pulse 1.8s ease-in-out infinite; flex-shrink: 0; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.5)} }
+    @media (max-width: 480px) { .card { padding: 36px 20px; } .quick-links { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K65VXQ5V" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <nav>
+    <a href="/" class="nav-logo">Vanguard<span> Flow &amp; Spark</span></a>
+    <a href="tel:+39XXXXXXXXXX" class="nav-phone">
+      <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.1 12 19.79 19.79 0 011.07 3.37a2 2 0 011.99-2.18H6a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16z"/></svg>
+      +39 XXX XXX XXXX
+    </a>
+  </nav>
+
+  <main>
+    <div class="card">
+      <div class="error-num" aria-hidden="true">404</div>
+      <div class="icon-wrap" aria-hidden="true">
+        <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+      </div>
+      <h1>Pagina non trovata</h1>
+      <p class="subtitle">La pagina che cerchi non esiste o è stata spostata. Ecco dove puoi andare:</p>
+
+      <div class="quick-links">
+        <a href="/elettrici.html" class="quick-link">
+          <span class="quick-link-tag">Elettricità</span>
+          <h3>Impianti Elettrici</h3>
+        </a>
+        <a href="/idraulici.html" class="quick-link">
+          <span class="quick-link-tag">Idraulica</span>
+          <h3>Impianti Idraulici</h3>
+        </a>
+        <a href="/urgenti.html" class="quick-link">
+          <span class="quick-link-tag">Emergenza</span>
+          <h3>Interventi Urgenti</h3>
+        </a>
+        <a href="/ristrutturazioni.html" class="quick-link">
+          <span class="quick-link-tag">Ristrutturazione</span>
+          <h3>Ristrutturazioni</h3>
+        </a>
+      </div>
+
+      <a href="tel:+39XXXXXXXXXX" class="btn-primary">
+        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.1 12 19.79 19.79 0 011.07 3.37a2 2 0 011.99-2.18H6a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16z"/></svg>
+        Hai urgenza? Chiama ora
+      </a>
+      <a href="/" class="btn-ghost">← Torna alla homepage</a>
+    </div>
+  </main>
+
+  <div class="sticky-bar" role="complementary">
+    <div class="pulse" aria-hidden="true"></div>
+    <a href="tel:+39XXXXXXXXXX">
+      <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.1 12 19.79 19.79 0 011.07 3.37a2 2 0 011.99-2.18H6a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16z"/></svg>
+      Chiama ora — +39 XXX XXX XXXX
+    </a>
+  </div>
+</body>
+</html>
