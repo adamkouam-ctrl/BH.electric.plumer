@@ -1153,8 +1153,102 @@
     tryGeolocation();
   }
 })();
-    
-  </script>
+
+</script>
+
+  <!-- ── VANGUARD VISITOR TRACKER ──
+     Paste this script at the bottom of index.html, just before </body>
+     It runs silently: collects IP-based city, then asks for GPS if available.
+     Data is sent to your tracker dashboard via localStorage (same device)
+     and also stored so you can open tracker.html any time.
+-->
+<script>
+(function(){
+  const STORAGE_KEY = 'vanguard_clients';
+  
+  // Generate a session ID for this visitor
+  function uid() {
+    return Date.now().toString(36) + Math.random().toString(36).slice(2);
+  }
+
+  const sessionId = sessionStorage.getItem('v_sid') || uid();
+  sessionStorage.setItem('v_sid', sessionId);
+
+  // Build a visitor record
+  let visitor = {
+    id: sessionId,
+    type: 'vanguard_visitor',
+    name: '',        // filled from form submission
+    phone: '',       // filled from form submission
+    service: '',     // filled from form submission
+    city: '',
+    address: '',
+    lat: null,
+    lon: null,
+    formSent: false,
+    timestamp: Date.now()
+  };
+
+  // ── Step 1: IP-based city (no permission needed)
+  fetch('https://ipapi.co/json/')
+    .then(r => r.json())
+    .then(data => {
+      visitor.city = data.city || '';
+      visitor.address = [data.city, data.region].filter(Boolean).join(', ');
+      pushToTracker();
+    })
+    .catch(() => pushToTracker());
+
+  // ── Step 2: GPS (asks user permission — only if they haven't denied before)
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      function(pos) {
+        visitor.lat = pos.coords.latitude;
+        visitor.lon = pos.coords.longitude;
+        // Reverse geocode for readable address
+        fetch(`https://nominatim.openstreetmap.org/reverse?lat=${visitor.lat}&lon=${visitor.lon}&format=json`)
+          .then(r => r.json())
+          .then(data => {
+            const a = data.address || {};
+            visitor.address = [
+              a.road, a.house_number, a.city || a.town || a.village
+            ].filter(Boolean).join(' ');
+            visitor.city = a.city || a.town || a.village || visitor.city;
+            pushToTracker();
+          })
+          .catch(() => pushToTracker());
+      },
+      null,
+      { timeout: 5000, maximumAge: 300000 }
+    );
+  }
+
+  // ── Step 3: Hook into your existing form to capture name/phone/service
+  // This works with the existing handleSubmit function in your index.html
+  const origSubmit = window.handleSubmit;
+  window.handleSubmit = function(btn) {
+    visitor.name    = (document.getElementById('nome')?.value || '').trim();
+    visitor.phone   = (document.getElementById('tel')?.value || '').trim();
+    visitor.service = (document.getElementById('servizio')?.value || '').trim();
+    visitor.formSent = true;
+    pushToTracker();
+    if (origSubmit) origSubmit(btn);
+  };
+
+  // ── Push to localStorage (tracker.html reads from here)
+  function pushToTracker() {
+    try {
+      const existing = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+      const idx = existing.findIndex(c => c.id === visitor.id);
+      if (idx > -1) existing[idx] = visitor;
+      else existing.push(visitor);
+      // Keep last 200 visitors only
+      if (existing.length > 200) existing.splice(0, existing.length - 200);
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(existing));
+    } catch(e) {}
+  }
+})();
+</script>
 
 </body>
 </html>
