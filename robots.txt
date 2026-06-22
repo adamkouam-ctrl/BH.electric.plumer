@@ -10,4 +10,7 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: *
+Disallow: /tracker.html
+
 Sitemap: https://bh-electricbh-plumer.vercel.app/sitemap.xml
