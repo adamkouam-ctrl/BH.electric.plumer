@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Vanguard — Client Tracker</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --navy:#1A2744;
+    --navy-deep:#111B33;
+    --terra:#C4603A;
+    --terra-light:#D97A55;
+    --linen:#F7F4EE;
+    --border:#E2DDD6;
+    --mid:#6B7280;
+    --white:#fff;
+    --green:#22c55e;
+    --red:#ef4444;
+    --yellow:#f59e0b;
+  }
+  body{font-family:'Inter',system-ui,sans-serif;background:var(--navy-deep);color:var(--white);min-height:100vh;}
+  
+  /* HEADER */
+  .header{background:var(--navy);border-bottom:2px solid var(--terra);padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+  .header-logo{font-size:1.1rem;font-weight:700;letter-spacing:0.02em;}
+  .header-logo span{color:var(--terra);}
+  .header-meta{display:flex;align-items:center;gap:10px;}
+  .live-dot{width:8px;height:8px;background:var(--green);border-radius:50%;animation:pulse 1.8s ease-in-out infinite;flex-shrink:0;}
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.5)}}
+  .live-label{font-size:0.78rem;color:rgba(255,255,255,.6);font-weight:500;}
+  .clear-btn{background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.3);color:#fca5a5;padding:7px 14px;border-radius:6px;font-size:0.78rem;font-weight:600;cursor:pointer;transition:background .2s;}
+  .clear-btn:hover{background:rgba(239,68,68,.25);}
+
+  /* STATS ROW */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;padding:20px 24px 0;}
+  .stat-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:16px 18px;}
+  .stat-card .num{font-size:1.8rem;font-weight:700;line-height:1;color:var(--white);}
+  .stat-card .num.terra{color:var(--terra);}
+  .stat-card .num.green{color:var(--green);}
+  .stat-label{font-size:0.73rem;color:rgba(255,255,255,.45);margin-top:5px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;}
+
+  /* MAIN GRID */
+  .main{display:grid;grid-template-columns:1fr 360px;gap:16px;padding:16px 24px 24px;align-items:start;}
+  @media(max-width:860px){.main{grid-template-columns:1fr;}}
+
+  /* MAP PANEL */
+  .panel{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;overflow:hidden;}
+  .panel-header{padding:14px 18px;border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between;}
+  .panel-title{font-size:0.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.5);}
+  .map-container{position:relative;height:420px;background:#1a2035;}
+  .map-iframe{width:100%;height:100%;border:none;filter:hue-rotate(180deg) invert(1) brightness(.85);}
+  .map-pins{position:absolute;inset:0;pointer-events:none;}
+
+  /* CLIENT LIST */
+  .list-panel{display:flex;flex-direction:column;gap:0;}
+  .list-scroll{max-height:480px;overflow-y:auto;}
+  .list-scroll::-webkit-scrollbar{width:4px;}
+  .list-scroll::-webkit-scrollbar-track{background:transparent;}
+  .list-scroll::-webkit-scrollbar-thumb{background:rgba(255,255,255,.1);border-radius:2px;}
+  .client-row{padding:14px 18px;border-bottom:1px solid rgba(255,255,255,.05);display:flex;align-items:flex-start;gap:12px;cursor:pointer;transition:background .15s;}
+  .client-row:hover{background:rgba(255,255,255,.04);}
+  .client-row.new{border-left:3px solid var(--terra);}
+  .client-avatar{width:36px;height:36px;border-radius:50%;background:var(--terra);display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;flex-shrink:0;}
+  .client-avatar.blue{background:#3b82f6;}
+  .client-avatar.green{background:#22c55e;}
+  .client-avatar.purple{background:#8b5cf6;}
+  .client-info{flex:1;min-width:0;}
+  .client-name{font-size:.88rem;font-weight:600;color:var(--white);margin-bottom:2px;}
+  .client-location{font-size:.78rem;color:rgba(255,255,255,.5);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .client-time{font-size:.72rem;color:rgba(255,255,255,.3);margin-top:3px;}
+  .client-badge{padding:3px 8px;border-radius:4px;font-size:.65rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;flex-shrink:0;margin-top:2px;}
+  .badge-new{background:rgba(196,96,58,.2);color:#f4a07c;border:1px solid rgba(196,96,58,.3);}
+  .badge-viewing{background:rgba(34,197,94,.15);color:#86efac;border:1px solid rgba(34,197,94,.2);}
+  .badge-form{background:rgba(59,130,246,.15);color:#93c5fd;border:1px solid rgba(59,130,246,.2);}
+
+  /* DETAIL PANEL */
+  .detail{background:rgba(196,96,58,.07);border:1px solid rgba(196,96,58,.2);border-radius:12px;padding:20px;margin:0 24px 24px;}
+  .detail.hidden{display:none;}
+  .detail-title{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--terra);margin-bottom:14px;}
+  .detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .detail-item{background:rgba(255,255,255,.04);border-radius:8px;padding:12px 14px;}
+  .detail-item-label{font-size:.68rem;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px;}
+  .detail-item-value{font-size:.9rem;font-weight:600;color:var(--white);}
+  .detail-item-value.terra{color:var(--terra-light);}
+  .map-link{display:inline-flex;align-items:center;gap:6px;margin-top:14px;background:var(--terra);color:#fff;padding:10px 18px;border-radius:7px;font-size:.84rem;font-weight:600;text-decoration:none;transition:background .2s;}
+  .map-link:hover{background:var(--terra-light);}
+  .copy-btn{display:inline-flex;align-items:center;gap:6px;margin-top:14px;margin-left:8px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.8);padding:10px 18px;border-radius:7px;font-size:.84rem;font-weight:600;border:none;cursor:pointer;transition:background .2s;}
+  .copy-btn:hover{background:rgba(255,255,255,.14);}
+
+  /* EMPTY STATE */
+  .empty{padding:48px 24px;text-align:center;}
+  .empty-icon{font-size:2.4rem;margin-bottom:12px;opacity:.4;}
+  .empty-text{color:rgba(255,255,255,.3);font-size:.88rem;line-height:1.6;}
+
+  /* TOAST */
+  .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--navy);border:1px solid var(--terra);color:#fff;padding:12px 20px;border-radius:8px;font-size:.84rem;font-weight:600;transition:transform .3s;z-index:999;white-space:nowrap;}
+  .toast.show{transform:translateX(-50%) translateY(0);}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-logo">Vanguard <span>Flow & Spark</span> — Client Tracker</div>
+  <div class="header-meta">
+    <div class="live-dot"></div>
+    <div class="live-label">Live visitors</div>
+    <button class="clear-btn" onclick="clearAll()">Cancella tutto</button>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="stat-card">
+    <div class="num terra" id="statTotal">0</div>
+    <div class="stat-label">Visitatori oggi</div>
+  </div>
+  <div class="stat-card">
+    <div class="num green" id="statActive">0</div>
+    <div class="stat-label">Con posizione</div>
+  </div>
+  <div class="stat-card">
+    <div class="num" id="statForms">0</div>
+    <div class="stat-label">Form inviati</div>
+  </div>
+  <div class="stat-card">
+    <div class="num" id="statArea">—</div>
+    <div class="stat-label">Zona più attiva</div>
+  </div>
+</div>
+
+<div class="main">
+  <!-- MAP -->
+  <div class="panel">
+    <div class="panel-header">
+      <div class="panel-title">Mappa visitatori</div>
+      <div style="font-size:.72rem;color:rgba(255,255,255,.3);">Lombardia & Nord Italia</div>
+    </div>
+    <div class="map-container">
+      <iframe class="map-iframe" id="mapFrame"
+        src="https://maps.google.com/maps?q=Milan,Italy&z=9&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Mappa visitatori">
+      </iframe>
+    </div>
+  </div>
+
+  <!-- CLIENT LIST -->
+  <div class="panel list-panel">
+    <div class="panel-header">
+      <div class="panel-title">Visitatori recenti</div>
+      <div style="font-size:.72rem;color:rgba(255,255,255,.3);" id="listCount">0 totale</div>
+    </div>
+    <div class="list-scroll" id="clientList">
+      <div class="empty">
+        <div class="empty-icon">📍</div>
+        <div class="empty-text">Nessun visitatore ancora.<br/>Le posizioni appariranno qui<br/>quando i clienti visitano il sito.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DETAIL PANEL -->
+<div class="detail hidden" id="detailPanel">
+  <div class="detail-title">📍 Dettaglio cliente selezionato</div>
+  <div class="detail-grid" id="detailGrid"></div>
+  <div style="display:flex;flex-wrap:wrap;gap:0;">
+    <a href="#" class="map-link" id="mapsLink" target="_blank">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Apri in Google Maps
+    </a>
+    <button class="copy-btn" id="copyBtn" onclick="copyAddress()">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+      Copia indirizzo
+    </button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ── Storage key
+const STORAGE_KEY = 'vanguard_clients';
+let clients = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+let selectedId = null;
+
+const colors = ['', 'blue', 'green', 'purple'];
+
+// ── Render
+function render() {
+  const list = document.getElementById('clientList');
+  const withLoc = clients.filter(c => c.lat);
+  
+  document.getElementById('statTotal').textContent = clients.length;
+  document.getElementById('statActive').textContent = withLoc.length;
+  document.getElementById('statForms').textContent = clients.filter(c => c.formSent).length;
+  document.getElementById('listCount').textContent = clients.length + ' totale';
+
+  // Most active area
+  const areas = {};
+  clients.forEach(c => { if(c.city){ areas[c.city] = (areas[c.city]||0)+1; }});
+  const topArea = Object.entries(areas).sort((a,b)=>b[1]-a[1])[0];
+  document.getElementById('statArea').textContent = topArea ? topArea[0] : '—';
+
+  if (clients.length === 0) {
+    list.innerHTML = `<div class="empty"><div class="empty-icon">📍</div><div class="empty-text">Nessun visitatore ancora.<br/>Le posizioni appariranno qui<br/>quando i clienti visitano il sito.</div></div>`;
+    return;
+  }
+
+  list.innerHTML = clients.slice().reverse().map((c, i) => {
+    const colorClass = colors[i % colors.length];
+    const initials = c.name ? c.name.split(' ').map(w=>w[0]).join('').toUpperCase().slice(0,2) : '?';
+    const isNew = Date.now() - c.timestamp < 60000;
+    const badgeClass = c.formSent ? 'badge-form' : (c.lat ? 'badge-viewing' : 'badge-new');
+    const badgeText = c.formSent ? 'Form' : (c.lat ? 'Posizione' : 'Nuovo');
+    const timeStr = formatTime(c.timestamp);
+    return `
+      <div class="client-row ${isNew?'new':''}" onclick="selectClient('${c.id}')">
+        <div class="client-avatar ${colorClass}">${initials}</div>
+        <div class="client-info">
+          <div class="client-name">${c.name || 'Visitatore anonimo'}</div>
+          <div class="client-location">${c.address || c.city || 'Posizione non condivisa'}</div>
+          <div class="client-time">${timeStr}</div>
+        </div>
+        <div class="client-badge ${badgeClass}">${badgeText}</div>
+      </div>`;
+  }).join('');
+}
+
+function formatTime(ts) {
+  const diff = Math.floor((Date.now() - ts) / 1000);
+  if (diff < 60) return 'Adesso';
+  if (diff < 3600) return Math.floor(diff/60) + ' min fa';
+  if (diff < 86400) return Math.floor(diff/3600) + ' ore fa';
+  return new Date(ts).toLocaleDateString('it-IT');
+}
+
+// ── Select client
+function selectClient(id) {
+  const c = clients.find(x => x.id === id);
+  if (!c) return;
+  selectedId = id;
+
+  const panel = document.getElementById('detailPanel');
+  const grid = document.getElementById('detailGrid');
+  panel.classList.remove('hidden');
+
+  grid.innerHTML = `
+    <div class="detail-item">
+      <div class="detail-item-label">Nome</div>
+      <div class="detail-item-value">${c.name || 'Anonimo'}</div>
+    </div>
+    <div class="detail-item">
+      <div class="detail-item-label">Telefono</div>
+      <div class="detail-item-value terra">${c.phone || '—'}</div>
+    </div>
+    <div class="detail-item">
+      <div class="detail-item-label">Città</div>
+      <div class="detail-item-value">${c.city || '—'}</div>
+    </div>
+    <div class="detail-item">
+      <div class="detail-item-label">Servizio richiesto</div>
+      <div class="detail-item-value">${c.service || '—'}</div>
+    </div>
+    <div class="detail-item" style="grid-column:span 2">
+      <div class="detail-item-label">Indirizzo approssimativo</div>
+      <div class="detail-item-value">${c.address || 'Non disponibile'}</div>
+    </div>
+    <div class="detail-item">
+      <div class="detail-item-label">Lat / Lon</div>
+      <div class="detail-item-value" style="font-size:.78rem">${c.lat ? c.lat.toFixed(5)+' / '+c.lon.toFixed(5) : '—'}</div>
+    </div>
+    <div class="detail-item">
+      <div class="detail-item-label">Orario visita</div>
+      <div class="detail-item-value" style="font-size:.82rem">${new Date(c.timestamp).toLocaleString('it-IT')}</div>
+    </div>`;
+
+  // Update map
+  if (c.lat) {
+    document.getElementById('mapFrame').src =
+      `https://maps.google.com/maps?q=${c.lat},${c.lon}&z=14&output=embed`;
+    document.getElementById('mapsLink').href =
+      `https://www.google.com/maps?q=${c.lat},${c.lon}`;
+  }
+
+  panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+// ── Copy address
+function copyAddress() {
+  const c = clients.find(x => x.id === selectedId);
+  if (!c) return;
+  const text = c.address || (c.lat ? `${c.lat}, ${c.lon}` : '');
+  if (!text) { showToast('Nessun indirizzo disponibile'); return; }
+  navigator.clipboard.writeText(text).then(() => showToast('Indirizzo copiato ✓'));
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+function clearAll() {
+  if (!confirm('Cancellare tutti i dati?')) return;
+  clients = [];
+  localStorage.removeItem(STORAGE_KEY);
+  selectedId = null;
+  document.getElementById('detailPanel').classList.add('hidden');
+  render();
+}
+
+// ── Save
+function save() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(clients));
+}
+
+// ── Receive messages from your main site via postMessage
+window.addEventListener('message', (e) => {
+  if (e.data && e.data.type === 'vanguard_visitor') {
+    const existing = clients.find(c => c.id === e.data.id);
+    if (existing) {
+      Object.assign(existing, e.data);
+    } else {
+      clients.push(e.data);
+    }
+    save();
+    render();
+    showToast('Nuovo visitatore: ' + (e.data.city || 'posizione sconosciuta'));
+  }
+});
+
+// ── Also accept data via URL param (for testing)
+const params = new URLSearchParams(location.search);
+if (params.get('demo') === '1') loadDemo();
+
+function loadDemo() {
+  clients = [
+    { id:'d1', name:'Mario B.', phone:'+39 333 123 4567', city:'Milano', address:'Via Torino 45, Milano', lat:45.4642, lon:9.1900, service:'Impianto elettrico', timestamp: Date.now()-120000, formSent:true },
+    { id:'d2', name:'Lucia V.', phone:'', city:'Monza', address:'Corso Milano 12, Monza', lat:45.5845, lon:9.2744, service:'Perdita acqua', timestamp: Date.now()-600000, formSent:false },
+    { id:'d3', name:'Visitatore anonimo', phone:'', city:'Sesto San Giovanni', address:'', lat:45.5324, lon:9.2280, service:'', timestamp: Date.now()-30000, formSent:false },
+    { id:'d4', name:'Roberto F.', phone:'+39 347 987 6543', city:'Bergamo', address:'Via XX Settembre 8, Bergamo', lat:45.6983, lon:9.6773, service:'Ristrutturazione', timestamp: Date.now()-3600000, formSent:true },
+  ];
+  save();
+  render();
+}
+
+render();
+</script>
+</body>
+</html>
