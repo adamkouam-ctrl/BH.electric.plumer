@@ -33,6 +33,26 @@
   });
 </script>
 
+  <!-- Event snippet for Click to call (1) conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18265958519/rnRvCMyMl8QcEPfQ8YVE',
+      'value': 1.0,
+      'currency': 'EUR',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
+
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231A2744'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='serif' font-weight='bold' font-size='18' fill='%23C4603A'>V</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
