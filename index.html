@@ -22,6 +22,26 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-K65VXQ5V');</script>
   <!-- End Google Tag Manager -->
+  
+  <!-- Event snippet for Contact conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18265958519/4BrACJOclcQcEPfQ8YVE',
+      'value': 1.0,
+      'currency': 'EUR',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
 
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   
