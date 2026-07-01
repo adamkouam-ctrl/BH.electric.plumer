@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Disallow: /tracker.html
 
-Sitemap: https://bh-electricbh-plumer.vercel.app/sitemap.xml
+Sitemap: https://vanguardflowandspark.online/sitemap.xml
