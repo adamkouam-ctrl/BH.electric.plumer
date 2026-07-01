@@ -39,12 +39,12 @@ Renovations: free personalised quote.
 
 ## Contact
 
-- Website: https://bh-electricbh-plumer.vercel.app
+- Website: https://vanguardflowandspark.online
 - Phone / WhatsApp: +39 XXX XXX XXXX
 - Email: info@nordtecnici.it
 - Hours: Mon–Sun, 07:00–21:00
 
 ## Machine-Readable Resources
 
-- Structured data (JSON-LD): https://bh-electricbh-plumer.vercel.app/schema.jsonld
-- Sitemap: https://bh-electricbh-plumer.vercel.app/sitemap.xml
+- Structured data (JSON-LD): https://vanguardflowandspark.online/schema.jsonld
+- Sitemap: https://vanguardflowandspark.online/sitemap.xml
